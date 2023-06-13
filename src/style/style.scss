@@ -1,0 +1,534 @@
+@import './fonts';
+@import './progress-circle';
+@import './timeline.scss';
+@import './menu.scss';
+@import './captcha.scss';
+@import './blog.scss';
+
+.container {
+    max-width: 100%;
+}
+
+.main {
+    max-width: 1140px;
+    margin: 0 auto;
+    float: none;
+}
+
+body {
+    font-family: 'Roboto Slab', Arial;
+    font-weight: 300;
+    margin: 0;
+}
+
+a {
+    color: #087cc3;
+    text-decoration: none;
+
+    &:active,
+    &:hover,
+    &:focus,
+    &:visited {
+        color: #087cc3;
+        text-decoration: none;
+    }
+}
+
+.inner-container {
+    width: 100%;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.skill-set {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    text-align: center;
+
+    .skill {
+        display: inline;
+    }
+}
+
+.logo {
+    height: auto;
+    width: auto;
+    max-width: 40px;
+    max-height: 40px;
+}
+
+.JavaScript-progress-circle:after {
+    @include progress-circle(90, #e8cf58);
+}
+
+.PHP-progress-circle:after {
+    @include progress-circle(70, #757fb1);
+}
+
+.React-progress-circle:after {
+    @include progress-circle(90, #61dafb);
+}
+
+.Vue-progress-circle:after {
+    @include progress-circle(70, #41b882);
+}
+
+.Angular-progress-circle:after {
+    @include progress-circle(60, #ca3d32);
+}
+
+.Laravel-progress-circle:after {
+    @include progress-circle(70, #e74430);
+}
+
+.SASS-progress-circle:after {
+    @include progress-circle(80, #c0719c);
+}
+
+.Python-progress-circle:after {
+    @include progress-circle(30, #41729e);
+}
+
+.Redux-progress-circle:after {
+    @include progress-circle(90, #7649bb);
+}
+
+.Node-progress-circle:after {
+    @include progress-circle(80, #90c53e);
+}
+
+.jQuery-progress-circle:after {
+    @include progress-circle(90, #0868ac);
+}
+
+.GIT-progress-circle:after {
+    @include progress-circle(80, #de6046);
+}
+
+.HTML-progress-circle:after {
+    @include progress-circle(90, #e44d26);
+}
+
+.CSS-progress-circle:after {
+    @include progress-circle(80, #105ea9);
+}
+
+.SysAdmin-progress-circle:after {
+    @include progress-circle(70, #5f686a);
+}
+
+.Bootstrap-progress-circle:after {
+    @include progress-circle(80, #69429d);
+}
+
+.SQL-progress-circle:after {
+    @include progress-circle(70, #e48e00);
+}
+
+.MongoDB-progress-circle:after {
+    @include progress-circle(60, #423121);
+}
+
+.clearfix {
+    &:after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
+
+.section {
+    text-align: left;
+}
+
+.aside {
+    width: 100px;
+    height: 90px;
+    float: left;
+    margin: 0 20px 0px 20px;
+
+    &.aside-right {
+        float: right;
+    }
+
+    &.short {
+        height: 70px;
+    }
+
+    &.long {
+        height: 120px;
+    }
+
+    &.narrow {
+        width: 70px;
+    }
+
+    &.wide {
+        width: 110px;
+    }
+}
+
+.image {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    width: auto;
+}
+
+.title {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-family: Megrim, Arial;
+    font-size: 1.2em;
+
+    &:before,
+    &:after {
+        content: '';
+        border-top: 1px solid;
+        margin: 0 20px 0 0;
+        flex: 1 0 20px;
+    }
+
+    &:after {
+        margin: 0 0 0 20px;
+    }
+
+    &:first-of-type {
+        margin-top: 0;
+    }
+}
+
+.languages {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+        display: inline-block;
+        margin-right: 15px;
+    }
+}
+
+.text-center {
+    text-align: center;
+}
+
+.header {
+    position: relative;
+
+    .header-image {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .tag-line {
+        position: absolute;
+        right: 0;
+        top: 10%;
+        font-size: 3.5vw;
+        font-family: VT323;
+        text-transform: uppercase;
+        color: #6a503a;
+        padding-right: 36px;
+
+        .tag-line-emoji {
+            text-transform: none;
+        }
+    }
+}
+
+.footer {
+    position: relative;
+    margin-top: 15px;
+    float: left;
+
+    .footer-image {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+
+section {
+    padding: 20px;
+}
+
+.quote {
+    margin-bottom: 20px;
+    font-weight: bold;
+
+    .author {
+        font-weight: 300;
+    }
+}
+
+.projects {
+
+    .content {
+        display: flex;
+        flex-wrap: wrap;
+
+        .project {
+            text-align: center;
+            min-height: 250px;
+
+            .project-image {
+                height: 244px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                .image {
+                    box-shadow: 1px 1px 20px 7px rgba(0,0,0,0.11);
+
+                    max-height: 244px;
+
+                    &.multiple-3 {
+                        width: 33%;
+                    }
+                }
+            }
+
+            .project-logo {
+                display: inline-block;
+                height: 50px;
+                margin-right: 20px;
+                max-width: 200px;
+            }
+
+            .project-title {
+                line-height: 3em;
+                padding: 15px 0;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            }
+
+            .description {
+                text-align: left;
+                padding-top: 15px;
+            }
+
+            &:first-of-type {
+                margin-top: 0;
+            }
+
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+
+            a {
+                color: black;
+
+                &:active,
+                &:hover,
+                &:focus,
+                &:visited {
+                    color: black;
+                }
+            }
+
+            .technologies {
+                margin: 15px 0 0 0;
+                list-style-type: none;
+                padding: 0;
+
+                .technology {
+                    display: inline-block;
+                    padding: 4px;
+                    background-color: #efefef;
+                    margin-right: 5px;
+                    margin-bottom: 5px;
+                    border: 1px solid transparent;
+                    border-radius: 5px;
+                    color: #525252;
+
+                    &:last-of-type {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.separator {
+    text-align: center;
+    font-size: 1.5em;
+    display: flex;
+    justify-content: space-evenly;
+    width: 50%;
+    margin: -5px auto 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+    .project {
+        max-width: 50%;
+        padding: 20px;
+        margin: 0;
+    }
+
+    .separator {
+        display: none;
+    }
+}
+
+.form-input, textarea {
+    background-color: #f2f2f2;
+    box-shadow: none;
+    outline: none;
+    border: none;
+    padding: 3px 6px;
+    width: 100%;
+    margin-bottom: 13px;
+}
+
+#contact-us {
+    margin: 0 auto;
+
+    .form-input {
+        float: left;
+    }
+
+    textarea {
+        height: 80px;
+        resize: none;
+    }
+
+    .submit-btn {
+        background-color: #262424;
+        color: #b8b6ac;
+        padding: 3px 14px;
+        font-family: Megrim, Arial;
+        border: 1px solid transparent;
+        border-radius: 5px;
+        min-width: 120px;
+        font-size: 1.2em;
+    }
+
+    .instructions {
+        font-size: 0.8em;
+        margin-top: 8px;
+    }
+
+    .overlay {
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+        background: #f2f2f2;
+        z-index: 5;
+        position: absolute;
+        transition: all .3s ease-in-out;
+
+        .checkmark {
+            width: 28px;
+            height: 28px;
+            width: 28px;
+            margin: 34px auto;
+        }
+
+        &.visible {
+            height: 100px;
+        }
+    }
+
+    .confirmation {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: #1BBC9B;
+        width: 80%;
+        margin: 0 auto;
+        color: white;
+        font-family: Megrim, Arial;
+        font-size: 1.2em;
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+        display: none;
+        height: 0;
+        line-height: 38px;
+        z-index: 10;
+
+        .checkmark {
+            height: 16px;
+            width: 16px;
+            margin-left: 2px;
+        }
+
+        &.visible {
+            display: inline-block;
+            animation: 0.2s linear 0s 1 forwards slide-down;
+        }
+    }
+
+    .explanation {
+        position: absolute;
+        top: 16px;
+        left: 14%;
+        z-index: 10;
+        padding: 6px 10px;
+        display: none;
+        border-radius: 5px;
+        font-size: 0.9em;
+        color: #262424;
+        text-align: center;
+        border: 1px solid transparent;
+        background: white;
+        font-family: VT323, Arial;
+        animation: pulse 1s infinite;
+
+        &.visible {
+            display: block;
+        }
+    }
+}
+
+@keyframes slide-down {
+    from {
+        height: 0;
+    }
+    to {
+        height: 38px;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    #contact-us {
+        position: relative;
+
+        width: 50%;
+
+        .form-input {
+            width: 49%;
+
+            &:last-of-type {
+                float: right;
+            }
+        }
+
+        textarea.form-input {
+            width: 100%;
+        }
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1, 1);
+    }
+    25% {
+        transform: scale(1.05, 1.05);
+    }
+    50% {
+        transform: scale(1.1, 1.1);
+    }
+    75% {
+        transform: scale(1.05, 1.05);
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+}
