@@ -4,7 +4,7 @@ import TimelineEvent from './components/timeline-event';
 import Project from './components/project';
 import ContactForm from './components/contact-form';
 import Separator from './components/separator';
-import { slide as Menu } from 'react-burger-menu';
+// import { slide as Menu } from 'react-burger-menu';
 import './style/style.scss';
 
 export default class App extends Component {
@@ -44,7 +44,7 @@ export default class App extends Component {
                     <a className="menu-item" href="#contact" onClick={(event) => this.onMenuClick(event)}>Contact</a>
                 </Menu> */}
                 <header className="header">
-                    <img src="airplane.png" className="header-image" />
+                    <img src="airplane.png" className="header-image" alt="Airplane" />
                     <span className="tag-line">
                         Web Developer ^_^<br/>
                         Fiction Writer <span className="tag-line-emoji">o_O</span><br/>
@@ -55,7 +55,7 @@ export default class App extends Component {
                     <span className="title" data-anchor="#in-a-nutshell">In A Nutshell</span>
                     <section className="intro clearfix">
                         <div className="aside aside-right short">
-                            <img src="walnut.png" className="image" />
+                            <img src="walnut.png" className="image" alt="Walnut" />
                         </div>
                         <div className="content">
                             <p>
@@ -75,11 +75,11 @@ export default class App extends Component {
                             </p>
                             <p>
                                 In 2020, during lockdown, I created a digital adaptation of one of my favourite board games, War Chest.
-                                You can check it out on <a href="https://warchestonline.com/" target="_blank">warchestonline.com</a>.
+                                You can check it out on <a href="https://warchestonline.com/" target="_blank" rel="noreferrer">warchestonline.com</a>.
                                 There are over 30,000 registered users, and over 450,000 games have been played.
                             </p>
                             <p>
-                                In 2021, I self-published my first fantasy novel, <a href="https://www.amazon.co.uk/Dimsdales-Fire-M-Polak/dp/1739911504" target="_blank">
+                                In 2021, I self-published my first fantasy novel, <a href="https://www.amazon.co.uk/Dimsdales-Fire-M-Polak/dp/1739911504" target="_blank" rel="noreferrer">
                                 Dimsdale's Fire</a>. It's about a protagonist who develops a mysterious skin rash that releases magic at random.
                                 He must go on a quest to find a cure and try not to get in his own way.
                             </p>

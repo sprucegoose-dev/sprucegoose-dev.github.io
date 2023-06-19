@@ -112,7 +112,7 @@ export default class ContactForm extends Component {
 
         return (
             <form id="contact-us" onSubmit={this.handleSubmit}>
-                <div className={confirmationClass}>Sent <img className="checkmark" src="checkmark-white.png" /></div>
+                <div className={confirmationClass}>Sent <img className="checkmark" src="checkmark-white.png" alt="checkmark" /></div>
                 <input name="name" className="form-input" placeholder="Name" autoComplete="off" value={this.state.form.name} onChange={this.handleChange} required />
                 <input name="email" type="email" className="form-input" placeholder="Email" autoComplete="off" value={this.state.form.email} onChange={this.handleChange} required />
                 <textarea name="message" className="form-input" placeholder="Message" autoComplete="off" value={this.state.form.message} onChange={this.handleChange} />
@@ -122,26 +122,26 @@ export default class ContactForm extends Component {
                     </div>
                     <div className={overlayClass}>
                         <div className="checkmark" >
-                            <img src="checkmark.png" />
+                            <img src="checkmark.png" alt="checkmark" />
                         </div>
                     </div>
                     <span className="element sun">
-                        <img src="sun2.png" className="image" />
+                        <img src="sun2.png" className="image" alt="Sun" />
                     </span>
                     <span className="element cloud2">
-                                <img src="cloud2.png" className="image" />
+                                <img src="cloud2.png" className="image" alt="Cloud"  />
                             </span>
                     <span className="element cloud3">
-                                <img src="cloud2.png" className="image" />
+                                <img src="cloud2.png" className="image" alt="Cloud"/>
                             </span>
                     <span className="element scenery tree1">
-                                <img src="tree01.png" className="image" />
+                                <img src="tree01.png" className="image" alt="Tree" />
                             </span>
                     <span className="element scenery tree2">
-                                <img src="tree02.png" className="image" />
+                                <img src="tree02.png" className="image" alt="Tree"/>
                             </span>
                     <span className="element scenery rock1">
-                                <img src="rock01.png" className="image"/>
+                                <img src="rock01.png" className="image" alt="Rock" />
                             </span>
                     <ReactTouchEvents onTap={ this.validateCaptcha.bind(this)}>
                         <div className="fox" onClick={this.validateCaptcha.bind(this)}>

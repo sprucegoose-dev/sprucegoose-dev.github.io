@@ -21,7 +21,7 @@ export default class TimelineEvent extends Component {
                         {this.props.description}
                     </div>
                     <span className="marker">
-                        <img src={this.markerImg} className="image"/>
+                        <img src={this.markerImg} className="image" alt="Marker" />
                       </span>
                 </div>
                 {this.props.side === 'left' ? this.placeholderEvent : ''}

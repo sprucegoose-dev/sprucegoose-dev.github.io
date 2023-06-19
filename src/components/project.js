@@ -7,10 +7,10 @@ export default class Project extends Component {
         const baseUrl = '';
 
         if (typeof props.thumbnail === 'string') {
-            this.thumbnail = <img src={baseUrl + props.thumbnail} className="image" />;
+            this.thumbnail = <img src={baseUrl + props.thumbnail} className="image" alt={props.thumbnail} />;
         } else {
             this.thumbnail = props.thumbnail.map((thumb) => {
-                return <img key={thumb} src={baseUrl + thumb} className="image multiple-3" />;
+                return <img key={thumb} src={baseUrl + thumb} className="image multiple-3" alt={thumb} />;
             });
         }
         this.logo = `${baseUrl}${props.logo}`;
@@ -25,15 +25,15 @@ export default class Project extends Component {
         return (
             <div className="project">
                 <div className="project-image">
-                    <a className="thumbnail" href={this.props.link} title={this.props.title} target="_blank">
+                    <a className="thumbnail" href={this.props.link} title={this.props.title} target="_blank" rel="noreferrer">
                         {this.thumbnail}
                     </a>
                 </div>
                 <div className="project-title">
                     <span className="project-logo">
-                      <img src={this.logo} className="image"/>
+                      <img src={this.logo} className="image" alt="Logo"/>
                     </span>
-                    <a className="thumbnail" href={this.props.link} target="_blank">
+                    <a className="thumbnail" href={this.props.link} target="_blank" rel="noreferrer">
                         {this.props.title}
                     </a>
                 </div>
