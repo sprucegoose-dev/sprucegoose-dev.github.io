@@ -61,7 +61,8 @@ export default function App() {
                             since transitioned to doing primarily front-end work.
                         </p>
                         <p>
-                            I graduated from Hunter College, New York, back in 2011 with a degree in English Literature.
+                            I graduated from Hunter College, New York, back in 2011 with a degree in English Literature, and am now pursuing an
+                            MA in English Studies from the University of Nottingham.
                         </p>
                         <p>
                             In 2015, after I'd been dabbling with programming for a few years, I started working
@@ -162,13 +163,9 @@ export default function App() {
                     <TimelineEvent
                         date="Apr 2023 - Present"
                         side="right"
-                        title="Senior Engineer at Savi (UK)."
+                        title="Senior Engineer at Savi"
                         subtitle="United Kingdom (Remote)"
-                        description="Senior full-stack developer at a company that specializes in coupons and promotions leverages AI and Natural Language Processing (NLP) to assess risks in legal contracts.
-
-                                Project lead on the latest flagship product - a contract pre-screening add-in for MS Word.
-
-                                Actively developing new features as well as maintaining existing projects."
+                        description="Senior full-stack developer at a company that specializes in coupons and promotions."
                         markerImg="sun.png"
                     />
                     <TimelineEvent
@@ -221,11 +218,19 @@ export default function App() {
                 <span className="title" data-anchor="#education">Education</span>
                 <section className="education timeline">
                     <TimelineEvent
+                        date="2022 - Present"
+                        side="right"
+                        title="MA in English Studies"
+                        subtitle="University of Nottingham, Nottingham, United Kingdom"
+                        markerImg="saturn.png"
+                    />
+                    <TimelineEvent
                         date="2014 - 2015"
                         side="right"
                         title="English Teaching Certificate"
                         subtitle="Levinsky College of Education, Tel Aviv, Israel"
-                        markerImg="saturn.png"
+                        markerImg="uranus.png"
+                        attribution="vectorspoint - Flaticon"
                     />
                     <TimelineEvent
                         date="2006 - 2011"
@@ -233,8 +238,8 @@ export default function App() {
                         title="B.A. in English Literature, Language, and Criticism"
                         subtitle="Hunter College, New York, NY, USA"
                         description="3.892/4.00 GPA / Magna Cum Laude / Honors in the English Dept."
-                        markerImg="uranus.png"
-                        attribution="vectorspoint - Flaticon"
+                        markerImg="neptune.png"
+                        attribution="Freepik - Flaticon"
                     />
                 </section>
                 <span className="title" data-anchor="#languages">And... Actual Languages!</span>
