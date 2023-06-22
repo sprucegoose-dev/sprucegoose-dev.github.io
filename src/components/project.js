@@ -7,13 +7,13 @@ export default class Project extends Component {
         const baseUrl = '';
 
         if (typeof props.thumbnail === 'string') {
-            this.thumbnail = <img src={baseUrl + props.thumbnail} className="image" alt={props.thumbnail} />;
+            this.thumbnail = <img src={`${baseUrl}images/${props.thumbnail}`} className="image" alt={props.thumbnail} />;
         } else {
             this.thumbnail = props.thumbnail.map((thumb) => {
-                return <img key={thumb} src={baseUrl + thumb} className="image multiple-3" alt={thumb} />;
+                return <img key={thumb} src={`${baseUrl}images/${thumb}`} className="image multiple-3" alt={thumb} />;
             });
         }
-        this.logo = `${baseUrl}${props.logo}`;
+        this.logo = `${baseUrl}images/${props.logo}`;
         this.technologies = props.technologies.map((technology) => {
             const key = `${props.title}${technology}`;
             return <li key={key} className="technology">{technology}</li>

@@ -122,26 +122,26 @@ export default class ContactForm extends Component {
                     </div>
                     <div className={overlayClass}>
                         <div className="checkmark" >
-                            <img src="checkmark.png" alt="checkmark" />
+                            <img src="images/checkmark.png" alt="checkmark" />
                         </div>
                     </div>
                     <span className="element sun">
-                        <img src="sun2.png" className="image" alt="Sun" />
+                        <img src="images/sun2.png" className="image" alt="Sun" />
                     </span>
                     <span className="element cloud2">
-                                <img src="cloud2.png" className="image" alt="Cloud"  />
+                                <img src="images/cloud2.png" className="image" alt="Cloud"  />
                             </span>
                     <span className="element cloud3">
-                                <img src="cloud2.png" className="image" alt="Cloud"/>
+                                <img src="images/cloud2.png" className="image" alt="Cloud"/>
                             </span>
                     <span className="element scenery tree1">
-                                <img src="tree01.png" className="image" alt="Tree" />
+                                <img src="images/tree01.png" className="image" alt="Tree" />
                             </span>
                     <span className="element scenery tree2">
-                                <img src="tree02.png" className="image" alt="Tree"/>
+                                <img src="images/tree02.png" className="image" alt="Tree"/>
                             </span>
                     <span className="element scenery rock1">
-                                <img src="rock01.png" className="image" alt="Rock" />
+                                <img src="images/rock01.png" className="image" alt="Rock" />
                             </span>
                     <ReactTouchEvents onTap={ this.validateCaptcha.bind(this)}>
                         <div className="fox" onClick={this.validateCaptcha.bind(this)}>

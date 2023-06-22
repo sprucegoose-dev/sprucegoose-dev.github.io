@@ -6,7 +6,7 @@ export default class TimelineEvent extends Component {
         super(props);
         this.classes = `event event-${props.side}`;
         this.placeholderEvent = <div className="event"></div>;
-        this.markerImg = `${props.markerImg}`;
+        this.markerImg = `images/${props.markerImg}`;
     }
 
     render() {
