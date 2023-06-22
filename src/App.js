@@ -7,6 +7,8 @@ import Blog from './components/Blog';
 import Homepage from './components/Homepage';
 import MainMenu from './components/MainMenu';
 
+import moment from 'moment';
+
 export default function App() {
     return (
         <main>
@@ -25,6 +27,9 @@ export default function App() {
                     <Route path="/blog" element={<Blog />} />
                 </Routes>
             </div>
+            <section className="section copyright-notice">
+                &copy; {moment().format('YYYY')} Morgan Polak
+            </section>
         </main>
     );
 }

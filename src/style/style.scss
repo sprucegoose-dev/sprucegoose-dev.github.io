@@ -5,16 +5,6 @@
 @import './captcha.scss';
 @import './blog.scss';
 
-.container {
-    max-width: 100%;
-}
-
-.homepage {
-    max-width: 1140px;
-    margin: 0 auto;
-    float: none;
-}
-
 body {
     font-family: 'Roboto Slab', Arial;
     font-weight: 300;
@@ -32,6 +22,17 @@ a {
         color: #087cc3;
         text-decoration: none;
     }
+}
+
+
+.container {
+    max-width: 100%;
+}
+
+.homepage {
+    max-width: 1140px;
+    margin: 0 auto;
+    float: none;
 }
 
 .inner-container {
@@ -140,6 +141,10 @@ a {
 
 .section {
     text-align: left;
+
+    &.copyright-notice {
+        text-align: center;
+    }
 }
 
 .aside {
