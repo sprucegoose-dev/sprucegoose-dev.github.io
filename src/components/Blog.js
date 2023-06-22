@@ -1,18 +1,25 @@
 import React, { useEffect, useState } from 'react';
-import BlogPost from './BlogPost.js';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
+import moment from 'moment';
+import _ from 'lodash';
 
+import BlogPost from './BlogPost.js';
 import spaceRats from '../posts/space_rats.txt';
 import scrabble from '../posts/scrabble.txt';
 import weekendWalruses from '../posts/weekend_walruses.txt';
 import goblinFair from '../posts/goblin_fair.txt';
 import kneidlachSoup from '../posts/kneidlach_soup.txt';
 
-import moment from 'moment';
-
 export default function Blog() {
     const [posts, setPosts] = useState([]);
+    const [scrollY, setScrollY] = useState(0);
 
     useEffect(() => {
+        const handleScroll = _.throttle(() => {
+            setScrollY(window.scrollY);
+        }, 500);
+
         const fetchPosts = async () => {
             const updatedPosts = [];
 
@@ -43,9 +50,16 @@ export default function Blog() {
         }
 
         fetchPosts();
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        }
+
     }, []);
 
-    const goToPost = (target) => {
+    const scrollToTarget = (target) => {
         const $target = document.querySelector(`[data-anchor='${target}']`);
 
         if ($target) {
@@ -56,26 +70,29 @@ export default function Blog() {
     }
 
     return (
-        <div className="blog">
+        <div className="blog" data-anchor="blog">
             {posts.length ?
-                <ul className="posts-list">
-                    <span>Blog posts:</span>
-                    {posts.map((post) =>
-                        <li className="post-link" onClick={() => { goToPost(post.title)}}>
-                            <span className="post-link-text">
-                                {post.title}
-                            </span>
-                        </li>
-                    )}
-                </ul>
-            : null}
-
-            {posts.length ?
-                posts.map((post) =>
-                    <BlogPost key={post.title} {...post} />
-                ) :
-                'Nothing here yet.'
-            }
+                <>
+                    <ul className="posts-list">
+                        <div className="posts-list-title">Blog posts:</div>
+                        {posts.map((post) =>
+                            <li key={`post-link-${post.title}`} className="post-link" onClick={() => { scrollToTarget(post.title)}}>
+                                <span className="post-link-text">
+                                    {post.title} ({Math.round(post.text.split(/\s+/).length / 200) || 1} min read)
+                                </span>
+                            </li>
+                        )}
+                    </ul>
+                    {
+                        posts.map((post) =>
+                            <BlogPost key={post.title} {...post} />
+                        )
+                    }
+                    <div className={`scroll-to-top ${scrollY >= 750 ? 'show' : 'hide'}`} onClick={() => { scrollToTarget('blog') }}>
+                        <FontAwesomeIcon icon={faArrowUp} />
+                    </div>
+                </>
+            : 'Loading...'}
         </div>
     );
 
