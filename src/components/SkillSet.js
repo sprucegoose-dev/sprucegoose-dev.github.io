@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Skill from './skill';
+import Skill from './Skill';
 
 export default class SkillSet extends Component {
 

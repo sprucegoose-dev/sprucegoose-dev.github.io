@@ -1,102 +1,130 @@
 .blog {
-  width: 90%;
-  margin: 0 auto;
-  padding-top: 10px;
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 10px;
 
-  .blog-post {
-    width: 100%;
-    margin-bottom: 40px;
-    position: relative;
-
-    .link {
-      cursor: pointer;
-    }
-
-    .top {
-      position: relative;
-      min-height: 80px;
-
-      .featured-image {
-        width: 100%;
-        height: auto;
-      }
-
-      .post-title {
-        position: absolute;
-        width: 90%;
-        right: 5%;
-        bottom: 10%;
-        font-size: 52px;
-        line-height: 55px;
-        text-align: center;
-        padding: 20px;
+    .posts-list {
         display: block;
-        background: rgba(0, 0, 0, 0.2);
-        text-shadow: 1px 0px 0 #f9f9f7, 3px 3px 0 #000000;
-        color: white;
-      }
+        margin: 35px auto 25px;
+        list-style-type:  none;
+        border-bottom: 1px solid rgb(187, 187, 187);
+        padding-bottom: 15px;
+        width: 80%;
 
+        .post-link {
+            background: rgb(244, 244, 244);
+            cursor: pointer;
+            display: inline-block;
+            border-radius: 4px;
+            margin-left: 10px;
+            margin-bottom: 10px;
+            padding: 2px 4px;
+        }
     }
 
-    .category {
-      position: absolute;
-      right: 15px;
-      top: 15px;
-      padding: 0px 6px;
-      border: 1px solid transparent;
-      color: white;
-      border-radius: 4px;
-      z-index: 1;
-      background: rgba(0, 0, 0, 0.6);
+    .blog-post {
+        margin: 0 auto 40px;
+        max-width: 900px;
+        position: relative;
+
+        .link {
+            cursor: pointer;
+        }
+
+        .top {
+            position: relative;
+            margin: 20px 0;
+
+            .featured-image {
+                width: 100%;
+                height: auto;
+            }
+
+            .post-title {
+                font-size: 2.5rem;
+                line-height: 2.5rem;
+                text-align: center;
+            }
+
+            .date {
+                text-align: right;
+                font-size: 0.9em;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 0;
+            }
+        }
+
+        .category {
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            padding: 0px 6px;
+            border: 1px solid transparent;
+            color: white;
+            border-radius: 4px;
+            z-index: 1;
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        .content {
+            padding: 12px 0;
+
+            &.poem {
+                text-align: center;
+            }
+
+            &:after {
+                content: '';
+                clear: both;
+                display: table;
+            }
+
+            img {
+                width: auto;
+                height: auto;
+            }
+
+            .section-break {
+                position: relative;
+                display: inline-block;
+                width: 100%;
+                height: 35px;
+
+                &:after {
+                    position: absolute;
+                    content: '';
+                    height: 1px;
+                    background: black;
+                    opacity: .75;
+                    width: 8%;
+                    top: 50%;
+                    margin: 0 auto;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+        }
+
+        .tag {
+            color: #6a4e3c;
+            font-size: 0.9em;
+            margin: 0 0 10px 7px;
+        }
+
+        hr {
+            margin: 6px auto;
+        }
+
+        .read-more {
+            text-align: right;
+            cursor: pointer;
+            color: #373a3c;
+
+            .icon {
+                font-size: 0.8em;
+            }
+        }
     }
-
-    .content {
-      padding: 12px 0;
-
-      &:after {
-        content: '';
-        clear: both;
-        display: table;
-      }
-
-      img {
-        width: auto;
-        height: auto;
-      }
-    }
-
-    .tag {
-      color: #6a4e3c;
-      font-size: 0.9em;
-      margin: 0 0 10px 7px;
-    }
-
-    hr {
-      margin: 6px auto;
-    }
-
-    .date {
-      text-align: right;
-      margin: 1px 1px 0 0;
-      font-size: 0.9em;
-      position: absolute;
-      bottom: 10px;
-      right: 10px;
-      color: white;
-      background: rgba(0, 0, 0, 0.6);
-      padding: 0 6px;
-    }
-
-    .read-more {
-      text-align: right;
-      cursor: pointer;
-      color: #373a3c;
-
-      .icon {
-        font-size: 0.8em;
-      }
-    }
-  }
 }
-
-
