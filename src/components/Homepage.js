@@ -17,22 +17,17 @@ export default function Homepage() {
                         Welcome!
                     </p>
                     <p>
-                        My name is Morgan Polak and I'm a full-stack web developer specializing in front-end applications written in React, Vue,
-                        and Angular (in that order). I started out working in PHP (Laravel 5+), and NodeJs, but have
-                        since transitioned to doing primarily front-end work.
+                        My name is Morgan Polak and I'm a full-stack web developer with over 8 years of experience specializing in React, Vue, and Node.js.
                     </p>
                     <p>
-                        I graduated from Hunter College, New York, back in 2011 with a degree in English Literature, and am now pursuing an
-                        MA in English Studies from the University of Nottingham.
-                    </p>
-                    <p>
-                        In 2015, after I'd been dabbling with programming for a few years, I started working
-                        in the field, and it's been my profession ever since.
+                        I also enjoy creative writing and have a BA in English Literature from Hunter College (NY),
+                         and an MA in English Studies from the University of Nottingham (UK). You can check out some of my short
+                         stories on the blog page.
                     </p>
                     <p>
                         In 2020, during lockdown, I created a digital adaptation of one of my favourite board games, War Chest.
                         You can check it out on <a href="https://warchestonline.com/" target="_blank" rel="noreferrer">warchestonline.com</a>.
-                        There are over 30,000 registered users, and over 450,000 games have been played.
+                        There are over 30,000 registered users, and over 500,000 games have been played.
                     </p>
                     <p>
                         In 2021, I self-published my first fantasy novel, <a href="https://www.amazon.co.uk/Dimsdales-Fire-M-Polak/dp/1739911504" target="_blank" rel="noreferrer">
