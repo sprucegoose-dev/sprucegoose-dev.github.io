@@ -162,14 +162,6 @@ export default function Homepage() {
                     description="Writing and editing content in English and Hebrew, and maintaining the company's blog, Facebook page, and marketing campaigns."
                     markerImg="mars.png"
                 />
-                <TimelineEvent
-                    date="Feb 2006 - Sept 2011"
-                    side="right"
-                    title="Sales Coordinator at Sea & Air International, Inc."
-                    subtitle="New York, NY, USA"
-                    description="Coordinating international relocation services, including pricing, information, and communication with overseas agents."
-                    markerImg="jupiter.png"
-                />
             </section>
             <span className="title" data-anchor="#education">Education</span>
             <section className="education timeline">
