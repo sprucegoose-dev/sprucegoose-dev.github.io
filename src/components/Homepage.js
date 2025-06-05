@@ -17,7 +17,7 @@ export default function Homepage() {
                         Welcome!
                     </p>
                     <p>
-                        My name is Morgan Polak and I'm a full-stack web developer with over 8 years of experience specializing in React, Vue, and Node.js.
+                        My name is Morgan Polak and I'm a full-stack web developer with 10 years of experience specializing in React, Vue, and Node.js.
                     </p>
                     <p>
                         I also enjoy creative writing and have a BA in English Literature from Hunter College (NY),
@@ -27,7 +27,7 @@ export default function Homepage() {
                     <p>
                         In 2020, during lockdown, I created a digital adaptation of one of my favourite board games, War Chest.
                         You can check it out on <a href="https://warchestonline.com/" target="_blank" rel="noreferrer">warchestonline.com</a>.
-                        There are over 30,000 registered users, and over 500,000 games have been played.
+                        There are over 45,000 registered users, and nearly 1 million games have been played.
                     </p>
                     <p>
                         In 2021, I self-published my first fantasy novel, <a href="https://www.amazon.co.uk/Dimsdales-Fire-M-Polak/dp/1739911504" target="_blank" rel="noreferrer">
