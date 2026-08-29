@@ -17,7 +17,7 @@
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
-body { background: var(--paper); color: var(--ink); font-family: 'Roboto Slab', Georgia, serif; font-weight: 400; line-height: 1.65; margin: 0; overflow-x: hidden; }
+body { background: var(--paper); color: var(--ink); font-family: 'Figtree', 'Roboto Slab', Georgia, serif; font-weight: 400; line-height: 1.65; margin: 0; overflow-x: hidden; }
 a { color: var(--coral); text-decoration-thickness: 2px; text-underline-offset: 3px; }
 a:hover, a:focus, a:active { color: var(--coral); }
 .container { max-width: 1180px; margin: 0 auto; padding: 0 28px; }
@@ -133,7 +133,7 @@ section { padding: 10px 0 25px; }
 .contact-copy p:last-child { margin-top: 0; }
 .form-fields { display: grid; gap: 15px; grid-template-columns: 1fr 1fr; }
 .form-fields label { color: var(--muted); font-family: 'VT323', monospace; font-size: 1.15rem; }
-.form-fields input, .form-fields textarea { background: var(--paper); border: 1px solid var(--line); border-radius: 0; color: var(--ink); display: block; font: 1rem 'Roboto Slab', Georgia, serif; margin-top: 4px; padding: 10px; width: 100%; }
+.form-fields input, .form-fields textarea { background: var(--paper); border: 1px solid var(--line); border-radius: 0; color: var(--ink); display: block; font: 1rem 'Figtree', 'Roboto Slab', Georgia, serif; margin-top: 4px; padding: 10px; width: 100%; }
 .form-fields textarea { resize: vertical; }
 .form-fields .full-width { grid-column: 1 / -1; }
 .form-fields .button { cursor: pointer; justify-self: start; }
