@@ -165,31 +165,35 @@ export default class Project extends Component {
                                 ×
                             </button>
                             <div className="lightbox-image-shell">
-                                <button
-                                    type="button"
-                                    className="lightbox-nav lightbox-prev"
-                                    onClick={this.goToPreviousLightbox}
-                                    aria-label={`Previous image for ${this.props.title}`}
-                                >
-                                    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                                        <path d="M14.5 5.5L8 12l6.5 6.5" />
-                                    </svg>
-                                </button>
+                                {this.thumbnails.length > 1 && (
+                                    <button
+                                        type="button"
+                                        className="lightbox-nav lightbox-prev"
+                                        onClick={this.goToPreviousLightbox}
+                                        aria-label={`Previous image for ${this.props.title}`}
+                                    >
+                                        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                            <path d="M14.5 5.5L8 12l6.5 6.5" />
+                                        </svg>
+                                    </button>
+                                )}
                                 <img
                                     src={this.thumbnails[this.state.lightboxIndex]}
                                     className="lightbox-image"
                                     alt={`${this.props.title} preview ${this.state.lightboxIndex + 1}`}
                                 />
-                                <button
-                                    type="button"
-                                    className="lightbox-nav lightbox-next"
-                                    onClick={this.goToNextLightbox}
-                                    aria-label={`Next image for ${this.props.title}`}
-                                >
-                                    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-                                        <path d="M9.5 5.5L16 12l-6.5 6.5" />
-                                    </svg>
-                                </button>
+                                {this.thumbnails.length > 1 && (
+                                    <button
+                                        type="button"
+                                        className="lightbox-nav lightbox-next"
+                                        onClick={this.goToNextLightbox}
+                                        aria-label={`Next image for ${this.props.title}`}
+                                    >
+                                        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                            <path d="M9.5 5.5L16 12l-6.5 6.5" />
+                                        </svg>
+                                    </button>
+                                )}
                             </div>
                         </div>
                     </div>
