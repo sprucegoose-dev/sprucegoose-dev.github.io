@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 import Project from './Project';
 import Separator from './Separator';
 import SkillSet from './SkillSet';
@@ -33,7 +35,7 @@ export default function Homepage() {
 	                    </div>
 					<div>
 						I have a BA in English Literature from Hunter College in New York and an MA in English Studies from the University of Nottingham.
-						I also write short fiction, some of which you can read <a href="/short-fiction">here</a>.
+						I also write short fiction, some of which you can read <Link to="/short-fiction">here</Link>.
 					</div>
                 </div>
             </section>
