@@ -44,6 +44,25 @@ export default function Homepage() {
             <div id="projects" className="title" data-anchor="#projects">Recent Projects</div>
             <section className="projects">
                 <div className="content clearfix">
+					<Project
+                        thumbnail="neutreeno.png"
+                        title="Neutreeno Platform"
+                        link="https://neutreeno.com"
+                        logo="neutreeno-logo.webp"
+                        description="The Neutreeno Platform provides organizations with carbon emissions measurements, insights,
+						 and action-grade decarbonisation plans, powered by advanced emissions modelling and
+						 technologies developed by University of Cambridge climate scientists."
+                        technologies={['TypeScript', 'React', 'Node.js', 'GraphQL', 'Apollo', 'Postgres', 'Terraform', 'AWS']}
+                    />
+                    <Separator />
+                    <Project
+                        thumbnail="ethnos_online.png"
+                        title="Ethons Online"
+                        link="https:/ethnos-online.com"
+                        logo="ethnos-logo.webp"
+                        description="A digital adaptation of the board game, Ethons, written in React for the front-end and Node.js for the backend."
+						technologies={['TypeScript', 'React', 'Node.js', 'Socket.io', 'MySQL']}
+                    />
                     <Project
                         thumbnail="warchest-screenshot.png"
                         title="warchestonline.com"
@@ -54,7 +73,7 @@ export default function Homepage() {
                         digital adaptation of the game is a personal project that I developed over a 3-4 month
                         period. The project is written in VueJs for the front-end and NodeJs for the backend,
                         and utilizes web sockets for real time updates of the game state."
-                        technologies={['Vue.js', 'Node.js', 'Socket.io', 'MySQL']}
+                        technologies={['TypeScript', 'Vue.js', 'Node.js', 'Socket.io', 'MySQL']}
                     />
                     <Separator />
                     <Project
@@ -83,7 +102,7 @@ export default function Homepage() {
                     <Project
                         thumbnail="boom25-screenshot.png"
                         title="boom25.com"
-                        link="https://www.boom25.com"
+                        link=""
                         logo="boom25-logo.jpg"
                         description="Boom25 took the United Kingdom by storm, offering full cashback
                         on purchases of any amount for every 25th buyer. I developed Boom's
@@ -122,7 +141,7 @@ export default function Homepage() {
                     side="right"
                     title="Senior Full-Stack Engineer at Neutreeno"
                     subtitle="Cambridge, United Kingdom"
-                    description="Senior full-stack software engineer at a start-up that uses advanced emissions measurements to help companies decarbonize."
+                    description="Senior full-stack software engineer at a start-up company that leverages action-grade measurement and decarbonisation technology to help companies reduce their carbon emissions."
                     markerImg="sun.png"
                 />
                 <TimelineEvent
