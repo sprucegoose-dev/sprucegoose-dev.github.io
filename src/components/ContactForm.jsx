@@ -44,7 +44,7 @@ export default function ContactForm() {
             <div className="contact-copy">
                 <p className="eyebrow">Open to good problems</p>
                 <h2>Have a project in mind?</h2>
-                <p>Tell me what you are building, fixing, or trying to make more fun.</p>
+                <p>Tell me what you're building, fixing, or trying to make more fun.</p>
             </div>
             <div className="form-fields">
                 <label>Name<input name="name" value={form.name} onChange={handleChange} required /></label>
