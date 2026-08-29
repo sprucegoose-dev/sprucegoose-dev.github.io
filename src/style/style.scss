@@ -140,6 +140,13 @@ section { padding: 10px 0 25px; }
     .container { padding: 0 18px; }
     .header-inner { padding: 90px 22px 80px; }
     .header:after { height: 240px; right: -90px; top: 100px; width: 240px; }
+    .header.short-fiction:after,
+    .header.short-fiction:before {
+        height: 220px;
+        right: -10px;
+        top: 90px;
+        width: 220px;
+    }
     .header-stamp { right: 24px; top: 405px; }
     .languages-and-frameworks { padding: 30px 18px; }
     .skill-set { grid-template-columns: repeat(3, 1fr); }
