@@ -19,7 +19,7 @@
 html { scroll-behavior: smooth; }
 body { background: var(--paper); color: var(--ink); font-family: 'Roboto Slab', Georgia, serif; font-weight: 400; line-height: 1.65; margin: 0; overflow-x: hidden; }
 a { color: var(--coral); text-decoration-thickness: 2px; text-underline-offset: 3px; }
-a:hover, a:focus { color: var(--ink); }
+a:hover, a:focus, a:active { color: var(--coral); }
 .container { max-width: 1180px; margin: 0 auto; padding: 0 28px; }
 .header { background: var(--cream); border-bottom: 1px solid var(--line); min-height: 570px; overflow: hidden; position: relative; }
 .header:after { background: var(--yellow); border-radius: 50%; content: ''; height: 360px; opacity: .85; position: absolute; right: 8%; top: 80px; width: 360px; }
@@ -54,6 +54,19 @@ section { padding: 10px 0 25px; }
 .projects .project-image { align-items: center; display: flex; height: 220px; justify-content: center; }
 .projects .project-image .thumbnail { align-items: center; display: flex; height: 100%; justify-content: center; width: 100%; }
 .projects .project-image .image { box-shadow: none; max-height: 220px; max-width: 100%; object-fit: contain; }
+.projects .project-carousel, .projects .project-image-button { background: transparent; border: 0; cursor: pointer; display: flex; height: 100%; justify-content: center; padding: 0; position: relative; width: 100%; }
+.projects .project-carousel-image { display: block; max-height: 220px; max-width: 100%; }
+.projects .project-carousel-controls { align-items: center; display: flex; justify-content: space-between; left: 12px; pointer-events: none; position: absolute; right: 12px; top: 50%; transform: translateY(-50%); }
+.projects .project-carousel-button { align-items: center; background: rgba(38, 50, 56, .72); border: 0; border-radius: 50%; color: #fff; cursor: pointer; display: inline-flex; height: 38px; justify-content: center; padding: 0; pointer-events: auto; position: relative; width: 38px; }
+.projects .project-carousel-button svg, .projects .lightbox-nav svg { background: transparent; display: block; fill: none; height: 18px; stroke: currentColor; stroke-linecap: round; stroke-linejoin: round; stroke-width: 2.5; width: 18px; }
+.projects .project-carousel-button:hover, .projects .project-carousel-button:focus { background: #fff; border: 1px solid rgba(38, 50, 56, .72); color: rgba(38, 50, 56, .72); }
+.projects .lightbox-overlay { align-items: center; background: rgba(17, 24, 39, .72); bottom: 0; display: flex; justify-content: center; left: 0; position: fixed; right: 0; top: 0; z-index: 1000; }
+.projects .lightbox-content { background: transparent; border: 0; box-shadow: none; max-width: 90vw; padding: 20px 20px 16px; position: relative; width: min(90vw, 90%); }
+.projects .lightbox-close { align-items: center; background: var(--ink); border: 0; border-radius: 50%; color: #fff; cursor: pointer; display: inline-flex; font-size: 1.8rem; height: 36px; justify-content: center; line-height: 1; padding: 0; position: absolute; right: 12px; top: 12px; width: 36px; }
+.projects .lightbox-image-shell { align-items: center; display: flex; gap: 12px; justify-content: center; min-height: 260px; }
+.projects .lightbox-image { display: block; max-height: 78vh; max-width: calc(100% - 110px); object-fit: contain; }
+.projects .lightbox-nav { align-items: center; background: rgba(38, 50, 56, .72); border: 0; border-radius: 50%; color: #fff; cursor: pointer; display: inline-flex; height: 42px; justify-content: center; min-width: 42px; padding: 0; position: relative; width: 42px; }
+.projects .lightbox-nav:hover, .projects .lightbox-nav:focus { background: #fff; color: rgba(38, 50, 56, .72); }
 .projects .project-logo { display: inline-flex; height: 42px; margin-right: 10px; max-width: 120px; vertical-align: middle; width: 120px; }
 .projects .project-logo .image { max-height: 42px; max-width: 120px; object-fit: contain; }
 .projects .project-title { align-items: center; border-bottom: 1px solid var(--line); display: flex; font-size: 1.35rem; justify-content: center; line-height: 1.2; padding: 15px 0; text-align: center; }

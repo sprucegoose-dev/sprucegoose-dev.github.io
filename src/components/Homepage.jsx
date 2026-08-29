@@ -45,7 +45,7 @@ export default function Homepage() {
             <section className="projects">
                 <div className="content clearfix">
 					<Project
-                        thumbnail="neutreeno.png"
+                        thumbnails={['neutreeno.png']}
                         title="Neutreeno Platform"
                         link="https://neutreeno.com"
                         logo="neutreeno-logo.webp"
@@ -56,15 +56,15 @@ export default function Homepage() {
                     />
                     <Separator />
                     <Project
-                        thumbnail="ethnos_online.png"
-                        title="Ethons Online"
-                        link="https:/ethnos-online.com"
+                        thumbnails={['ethnos_online.png', 'ethnos_online_2.png', 'ethnos_online_3.png']}
+                        title="Ethnos Online"
+                        link="https://ethnos-online.com"
                         logo="ethnos-logo.webp"
                         description="A digital adaptation of the board game, Ethons, written in React for the front-end and Node.js for the backend."
 						technologies={['TypeScript', 'React', 'Node.js', 'Socket.io', 'MySQL']}
                     />
                     <Project
-                        thumbnail="warchest-screenshot.png"
+                        thumbnails={['warchest-screenshot.png']}
                         title="warchestonline.com"
                         link="https://warchestonline.com"
                         logo="warchest-logo.png"
@@ -77,7 +77,7 @@ export default function Homepage() {
                     />
                     <Separator />
                     <Project
-                        thumbnail="tr-word-add-in-screenshot.png"
+                        thumbnails={['tr-word-add-in-screenshot.png']}
                         title="Word Add-in"
                         link="https://appsource.microsoft.com/en-us/product/office/WA200000668"
                         logo="tr-logo.svg"
@@ -88,7 +88,7 @@ export default function Homepage() {
                         technologies={['React/Redux', 'Word JavaScript API']}
                     />
                     <Project
-                        thumbnail="pizzahut-screenshot.png"
+                        thumbnails={['pizzahut-screenshot.png']}
                         title="pizzahut.co.il"
                         link="https://www.pizzahut.co.il"
                         logo="pizzahut-logo.gif"
@@ -100,7 +100,7 @@ export default function Homepage() {
                     />
                     <Separator />
                     <Project
-                        thumbnail="boom25-screenshot.png"
+                        thumbnails={['boom25-screenshot.png']}
                         title="boom25.com"
                         link=""
                         logo="boom25-logo.jpg"
@@ -112,7 +112,7 @@ export default function Homepage() {
                     />
                     <Separator />
                     <Project
-                        thumbnail="nickname-screenshot.png"
+                        thumbnails={['nickname-screenshot.png']}
                         title="nickname.co.il"
                         link="https://www.nickname.co.il"
                         logo="nickname-logo.svg"
@@ -124,7 +124,7 @@ export default function Homepage() {
                     />
                     <Separator />
                     <Project
-                        thumbnail='burger-new.png'
+                        thumbnails={['burger-new.png']}
                         title="app.burgeranch.co.il"
                         link="https://app.burgeranch.co.il"
                         logo="burgeranch-logo.png"
