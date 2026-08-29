@@ -12,7 +12,7 @@ export default class Project extends Component {
                 : [props.thumbnail].filter(Boolean);
 
         this.thumbnails = thumbnails.map((thumb) => `${baseUrl}images/${thumb}`);
-        this.state = { currentIndex: 0, isLightboxOpen: false };
+        this.state = { currentIndex: 0, lightboxIndex: 0, isLightboxOpen: false };
         this.logo = `${baseUrl}images/${props.logo}`;
         this.technologies = props.technologies.map((technology) => {
             const key = `${props.title}${technology}`;
@@ -42,8 +42,33 @@ export default class Project extends Component {
         }));
     };
 
+    goToPreviousLightbox = (event) => {
+        if (event) {
+            event.preventDefault();
+            event.stopPropagation();
+        }
+
+        this.setState((state) => ({
+            lightboxIndex: (state.lightboxIndex - 1 + this.thumbnails.length) % this.thumbnails.length,
+        }));
+    };
+
+    goToNextLightbox = (event) => {
+        if (event) {
+            event.preventDefault();
+            event.stopPropagation();
+        }
+
+        this.setState((state) => ({
+            lightboxIndex: (state.lightboxIndex + 1) % this.thumbnails.length,
+        }));
+    };
+
     openLightbox = () => {
-        this.setState({ isLightboxOpen: true });
+        this.setState({
+            isLightboxOpen: true,
+            lightboxIndex: this.state.currentIndex,
+        });
     };
 
     closeLightbox = () => {
@@ -143,7 +168,7 @@ export default class Project extends Component {
                                 <button
                                     type="button"
                                     className="lightbox-nav lightbox-prev"
-                                    onClick={this.goToPrevious}
+                                    onClick={this.goToPreviousLightbox}
                                     aria-label={`Previous image for ${this.props.title}`}
                                 >
                                     <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
@@ -151,14 +176,14 @@ export default class Project extends Component {
                                     </svg>
                                 </button>
                                 <img
-                                    src={this.thumbnails[this.state.currentIndex]}
+                                    src={this.thumbnails[this.state.lightboxIndex]}
                                     className="lightbox-image"
-                                    alt={`${this.props.title} preview ${this.state.currentIndex + 1}`}
+                                    alt={`${this.props.title} preview ${this.state.lightboxIndex + 1}`}
                                 />
                                 <button
                                     type="button"
                                     className="lightbox-nav lightbox-next"
-                                    onClick={this.goToNext}
+                                    onClick={this.goToNextLightbox}
                                     aria-label={`Next image for ${this.props.title}`}
                                 >
                                     <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
