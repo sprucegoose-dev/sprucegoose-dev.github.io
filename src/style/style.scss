@@ -87,9 +87,15 @@ section { padding: 10px 0 25px; }
 .projects .project-carousel-button:hover, .projects .project-carousel-button:focus { background: #fff; border: 1px solid rgba(38, 50, 56, .72); color: rgba(38, 50, 56, .72); }
 .projects .lightbox-overlay { align-items: center; background: rgba(17, 24, 39, .72); bottom: 0; display: flex; justify-content: center; left: 0; position: fixed; right: 0; top: 0; z-index: 1000; }
 .projects .lightbox-content { background: transparent; border: 0; box-shadow: none; max-width: 90vw; padding: 20px 20px 16px; position: relative; width: min(90vw, 90%); }
-.projects .lightbox-close { align-items: center; background: var(--ink); border: 0; border-radius: 50%; color: #fff; cursor: pointer; display: inline-flex; font-size: 1.8rem; height: 36px; justify-content: center; line-height: 1; padding: 0; position: absolute; right: 12px; top: 12px; width: 36px; }
-.projects .lightbox-image-shell { align-items: center; display: flex; gap: 12px; justify-content: center; min-height: 260px; }
+.projects .lightbox-close { align-items: center; background: var(--ink); border: 0; border-radius: 50%; color: #fff; cursor: pointer; display: inline-flex; font-size: 1.8rem; height: 36px; justify-content: center; line-height: 1; padding: 0; position: absolute; right: 18px; top: 18px; width: 36px; z-index: 3; }
+.projects .lightbox-image-shell { align-items: center; display: flex; gap: 12px; justify-content: center; min-height: 260px; position: relative; }
 .projects .lightbox-image { display: block; max-height: 78vh; max-width: calc(100% - 110px); object-fit: contain; }
+
+@media (max-width: 700px) {
+    .projects .lightbox-close {
+        right: 5px;
+    }
+}
 .projects .lightbox-nav { align-items: center; background: rgba(38, 50, 56, .72); border: 0; border-radius: 50%; color: #fff; cursor: pointer; display: inline-flex; height: 42px; justify-content: center; min-width: 42px; padding: 0; position: relative; width: 42px; }
 .projects .lightbox-nav:hover, .projects .lightbox-nav:focus { background: #fff; color: rgba(38, 50, 56, .72); }
 .projects .project-logo { display: inline-flex; height: 42px; margin-right: 10px; max-width: 120px; vertical-align: middle; width: 120px; }
@@ -153,6 +159,40 @@ section { padding: 10px 0 25px; }
     .projects .content { grid-template-columns: 1fr; }
     .projects .project-image { height: 190px; }
     .projects .project-image .image { max-height: 190px; }
+    .projects .project-carousel-controls {
+        inset: 0 8px;
+        left: 8px;
+        right: 8px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .projects .project-carousel-button {
+        height: 32px;
+        width: 32px;
+    }
+    .projects .lightbox-content {
+        max-width: calc(100vw - 24px);
+        padding: 14px 0 0;
+        width: auto;
+    }
+    .projects .lightbox-image-shell {
+        gap: 0;
+        min-height: 0;
+        position: relative;
+        width: fit-content;
+    }
+    .projects .lightbox-image {
+        max-height: 80vh;
+        max-width: calc(100vw - 72px);
+    }
+    .projects .lightbox-nav {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 2;
+    }
+    .projects .lightbox-prev { left: 10px; }
+    .projects .lightbox-next { right: 10px; }
     .contact-form { grid-template-columns: 1fr; padding: 24px 18px; }
     .form-fields { grid-template-columns: 1fr; }
     .form-fields .full-width { grid-column: auto; }
