@@ -18,7 +18,6 @@ export default function App() {
                         <a className="button button-primary" href="#projects">See selected work <span aria-hidden="true">-&gt;</span></a>
                         <a className="button button-quiet" href="#contact">Start a conversation</a>
                     </div>
-                    <div className="header-stamp" aria-hidden="true">Since<br />2011</div>
                 </div>
             </header>
             <div className="container">

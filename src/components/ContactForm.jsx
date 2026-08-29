@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 const initialForm = { name: '', email: '', message: '', website: '' };
+const defaultEndpoint = 'https://warchestonline.com/api/contact/send';
 
 export default function ContactForm() {
     const [form, setForm] = useState(initialForm);
@@ -14,7 +15,7 @@ export default function ContactForm() {
         event.preventDefault();
         if (form.website) return;
 
-        const endpoint = import.meta.env.VITE_CONTACT_ENDPOINT;
+        const endpoint = import.meta.env.VITE_CONTACT_ENDPOINT || defaultEndpoint;
         const payload = { name: form.name, email: form.email, message: form.message };
         setState('sending');
 

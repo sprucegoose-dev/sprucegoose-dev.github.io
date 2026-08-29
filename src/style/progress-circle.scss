@@ -4,7 +4,7 @@
   width: 72px;
   height: 72px;
   border-radius: 50%;
-  background: conic-gradient(var(--skill-color, #ec6d4f) var(--skill-level), #e8dfd3 0);
+  background: conic-gradient(var(--skill-color, #ec6d4f) var(--skill-level), #fff 0);
 }
 
 .progress-circle:after {
@@ -16,18 +16,25 @@
 }
 
 .progress-circle span {
-  color: #fffaf2;
+  align-items: center;
+  background: #fff;
+  color: #263238;
+  display: flex;
+  justify-content: center;
+  line-height: 1;
   position: absolute;
   left: 50%;
   top: 50%;
-  display: block;
   width: 62px;
   height: 62px;
-  line-height: 62px;
   text-align: center;
   border-radius: 50%;
-  background: #263238;
   z-index: 1;
   transform: translate(-50%, -50%);
+}
+
+.progress-circle .logo {
+  display: block;
+  flex: 0 0 auto;
 }
 

@@ -13,30 +13,35 @@ export default function Homepage() {
                     <img src="images/walnut.png" className="image" alt="Walnut" />
                 </div>
                 <div className="content">
-                    <p>
+                    <div>
                         Welcome!
-                    </p>
-                    <p>
+                    </div>
+                    <div>
                         My name is Morgan Polak and I'm a full-stack web developer with 10 years of experience specializing in React, Vue, and Node.js.
-                    </p>
-                    <p>
+                    </div>
+                    <div>
                         I also enjoy creative writing and have a BA in English Literature from Hunter College (NY),
                          and an MA in English Studies from the University of Nottingham (UK). You can check out some of my short
                          stories on the blog page.
-                    </p>
-                    <p>
+                    </div>
+                    <div>
                         In 2020, during lockdown, I created a digital adaptation of one of my favourite board games, War Chest.
                         You can check it out on <a href="https://warchestonline.com/" target="_blank" rel="noreferrer">warchestonline.com</a>.
                         There are over 50,000 registered users, and over 1.5 million games have been played.
-                    </p>
-                    <p>
+                    </div>
+                    <div>
                         In 2021, I self-published my first fantasy novel, <a href="https://www.amazon.co.uk/Dimsdales-Fire-M-Polak/dp/1739911504" target="_blank" rel="noreferrer">
-                            Dimsdale's Fire</a>. It's about a protagonist who develops a mysterious skin rash that releases magic at random.
-                        He must go on a quest to find a cure and try not to get in his own way.
-                    </p>
+                            Dimsdale's Fire</a>, a comedic adventure about a reluctant, out-of-shape hero who
+							develops a mysterious skin rash that releases magic at random, forcing him to go on a quest
+							for a cure.
+	                    </div>
+					<div>
+						I also designed five original board games! :)
+					</div>
+
                 </div>
             </section>
-            <span id="languages-and-frameworks" className="title" data-anchor="#languages-and-frameworks">Languages & Frameworks</span>
+            <span id="languages-and-frameworks" className="title" data-anchor="#languages-and-frameworks">Tech Stack</span>
             <section className="languages-and-frameworks">
                 <SkillSet />
             </section>
@@ -130,7 +135,7 @@ export default function Homepage() {
                     title="Senior Engineer at Savi"
                     subtitle="United Kingdom (Remote)"
                     description="Senior full-stack developer at a company that specializes in coupons and promotions."
-                    markerImg="venus.png"
+                    markerImg="mercury.png"
                 />
                 <TimelineEvent
                     date="Jan 2019 - Apr 2023"
@@ -142,7 +147,7 @@ export default function Homepage() {
                         Project lead on the latest flagship product - a contract pre-screening add-in for MS Word.
 
                         Actively developing new features as well as maintaining existing projects."
-                    markerImg="mercury.png"
+                    markerImg="venus.png"
                 />
                 <TimelineEvent
                     date="Oct 2015 - Oct 2018"
@@ -159,7 +164,7 @@ export default function Homepage() {
                     side="right"
                     title="Account Director at Voxme Software, Inc."
                     subtitle="Tel Aviv, Israel"
-                    description="Responsible for sales of the company's mobile app, as well as training new clients and providing ongoing technical support."
+                    description="Responsible for sales of the company's mobile app, as well as onboarding new clients and providing ongoing technical support."
                     markerImg="mars.png"
                 />
                 <TimelineEvent
@@ -168,7 +173,7 @@ export default function Homepage() {
                     title="Content Manager at USHOPS"
                     subtitle="Yokneam, Israel"
                     description="Writing and editing content in English and Hebrew, and maintaining the company's blog, Facebook page, and marketing campaigns."
-                    markerImg="saturn.png"
+                    markerImg="jupiter.png"
                 />
             </section>
             <span id="education" className="title" data-anchor="#education">Education</span>
@@ -178,14 +183,14 @@ export default function Homepage() {
                     side="right"
                     title="MA in English Studies"
                     subtitle="University of Nottingham, Nottingham, United Kingdom"
-                    markerImg="uranus.png"
+                    markerImg="saturn.png"
                 />
                 <TimelineEvent
                     date="2014 - 2015"
                     side="right"
                     title="English Teaching Certificate"
                     subtitle="Levinsky College of Education, Tel Aviv, Israel"
-                    markerImg="neptune.png"
+                    markerImg="uranus.png"
                     attribution="vectorspoint - Flaticon"
                 />
                 <TimelineEvent
@@ -194,9 +199,12 @@ export default function Homepage() {
                     title="B.A. in English Literature, Language, and Criticism"
                     subtitle="Hunter College, New York, NY, USA"
                     description="3.892/4.00 GPA / Magna Cum Laude / Honors in the English Dept."
-                    markerImg="asteroid.png"
+                    markerImg="neptune.png"
                     attribution="Freepik - Flaticon"
                 />
+                <div className="timeline-end-marker" aria-label="Asteroid marker">
+                    <img src="images/asteroid.png" className="image" alt="" />
+                </div>
             </section>
             <span id="languages" className="title" data-anchor="#languages">And... Actual Languages!</span>
             <section className="languages-section section text-center">

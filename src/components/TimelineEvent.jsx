@@ -5,14 +5,12 @@ export default class TimelineEvent extends Component {
     constructor(props) {
         super(props);
         this.classes = `event event-${props.side}`;
-        this.placeholderEvent = <div className="event"></div>;
         this.markerImg = `images/${props.markerImg}`;
     }
 
     render() {
         return (
             <div className="event-pair">
-                {this.props.side === 'right' ? this.placeholderEvent : ''}
                 <div className={this.classes}>
                     <div className="event-title">{this.props.title}</div>
                     <div className="event-subtitle">{this.props.subtitle}</div>
@@ -24,7 +22,6 @@ export default class TimelineEvent extends Component {
                         <img src={this.markerImg} className="image" alt="Marker" data-attribution={this.props.attribution || ''}/>
                       </span>
                 </div>
-                {this.props.side === 'left' ? this.placeholderEvent : ''}
             </div>
         );
     }
