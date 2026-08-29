@@ -11,5 +11,5 @@ export default defineConfig({
     port: 4173,
     host: '0.0.0.0',
   },
-  base: './',
+  base: '/',
 });

@@ -7,7 +7,7 @@ import ContactForm from './ContactForm';
 export default function Homepage() {
     return (
         <div className="homepage col-md-12">
-            <span id="in-a-nutshell" className="title" data-anchor="#in-a-nutshell">In A Nutshell</span>
+            <div id="in-a-nutshell" className="title title-intro" data-anchor="#in-a-nutshell">In A Nutshell</div>
             <section className="intro clearfix">
                 <div className="aside aside-right short">
                     <img src="images/walnut.png" className="image" alt="Walnut" />
@@ -20,16 +20,16 @@ export default function Homepage() {
                       I'm also a board game designer, creator of digital adaptations of board games, and fiction writer.
                     </div>
                     <div>
-						During lockdown in 2020, I built a digital adaptation of one of my favourite board games, War Chest.
-						<a href="https://warchestonline.com/" target="_blank" rel="noreferrer">War Chest Online</a> now has more than 50,000
+						During lockdown in 2020, I built a digital adaptation of one of my favourite board games, War Chest. The website,
+						&nbsp;<a href="https://warchestonline.com/" target="_blank" rel="noreferrer">warchestonline.com</a>, now has more than 50,000
 						 registered users and has hosted over 1.5 million games.
                     </div>
                     <div>
 						I've also designed five original board games, and in 2021 I self-published
 						my first fantasy novel,
-						<a href="https://www.amazon.co.uk/Dimsdales-Fire-M-Polak/dp/1739911504" target="_blank" rel="noreferrer">Dimsdale's Fire</a>
-						 — a comedic adventure about a reluctant,
-						out-of-shape hero whose mysterious skin rash has the unfortunate habit of releasing magic at random.
+						&nbsp;<a href="https://www.amazon.co.uk/Dimsdales-Fire-M-Polak/dp/1739911504" target="_blank" rel="noreferrer">Dimsdale's Fire</a>
+						&nbsp;— a comedic adventure about a reluctant,
+						&nbsp;out-of-shape hero whose mysterious skin rash has the unfortunate habit of releasing magic at random.
 	                    </div>
 					<div>
 						I have a BA in English Literature from Hunter College in New York and an MA in English Studies from the University of Nottingham.
@@ -37,11 +37,11 @@ export default function Homepage() {
 					</div>
                 </div>
             </section>
-            <span id="languages-and-frameworks" className="title" data-anchor="#languages-and-frameworks">Tech Stack</span>
+            <div id="languages-and-frameworks" className="title" data-anchor="#languages-and-frameworks">Tech Stack</div>
             <section className="languages-and-frameworks">
                 <SkillSet />
             </section>
-            <span id="projects" className="title" data-anchor="#projects">Recent Projects</span>
+            <div id="projects" className="title" data-anchor="#projects">Recent Projects</div>
             <section className="projects">
                 <div className="content clearfix">
                     <Project
@@ -115,7 +115,7 @@ export default function Homepage() {
                     />
                 </div>
             </section>
-            <span id="employment" className="title" data-anchor="#employment">Employment History</span>
+            <div id="employment" className="title" data-anchor="#employment">Employment History</div>
             <section className="employment timeline">
 				<TimelineEvent
                     date="Aug 2025 - Present"
@@ -172,7 +172,7 @@ export default function Homepage() {
                     markerImg="jupiter.png"
                 />
             </section>
-            <span id="education" className="title" data-anchor="#education">Education</span>
+            <div id="education" className="title" data-anchor="#education">Education</div>
             <section className="education timeline">
                 <TimelineEvent
                     date="2022 - Present"
@@ -202,14 +202,14 @@ export default function Homepage() {
                     <img src="images/asteroid.png" className="image" alt="" />
                 </div>
             </section>
-            <span id="languages" className="title" data-anchor="#languages">And... Actual Languages!</span>
+            <div id="languages" className="title" data-anchor="#languages">And... Actual Languages!</div>
             <section className="languages-section section text-center">
                 <ul className="languages">
                     <li><strong>Hebrew:</strong> Native speaker</li>
                     <li><strong>English:</strong> Native-speaker level</li>
                 </ul>
             </section>
-            <span id="contact" className="title" data-anchor="#contact">Get In Touch</span>
+            <div id="contact" className="title" data-anchor="#contact">Get In Touch</div>
             <section className="section text-center clearfix">
                 <ContactForm />
             </section>
