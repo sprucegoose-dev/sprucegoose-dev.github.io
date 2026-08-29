@@ -10,7 +10,7 @@ import weekendWalruses from '../posts/weekend_walruses.txt';
 import goblinFair from '../posts/goblin_fair.txt';
 import kneidlachSoup from '../posts/kneidlach_soup.txt';
 
-export default function Blog() {
+export default function ShortFiction() {
     const [posts, setPosts] = useState([]);
     const [scrollY, setScrollY] = useState(0);
 
@@ -73,7 +73,7 @@ export default function Blog() {
             {posts.length ?
                 <>
                     <ul className="posts-list">
-                        <div className="posts-list-title">Blog posts:</div>
+                        <div className="posts-list-title"><strong>Stories & poems:</strong></div>
                         {posts.map((post) =>
                             <li key={`post-link-${post.title}`} className="post-link" onClick={() => { scrollToTarget(post.title)}}>
                                 <span className="post-link-text">

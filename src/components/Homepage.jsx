@@ -33,7 +33,7 @@ export default function Homepage() {
 	                    </div>
 					<div>
 						I have a BA in English Literature from Hunter College in New York and an MA in English Studies from the University of Nottingham.
-						 I also write short fiction, some of which you can find on the blog.
+						I also write short fiction, some of which you can read <a href="/short-fiction">here</a>.
 					</div>
                 </div>
             </section>

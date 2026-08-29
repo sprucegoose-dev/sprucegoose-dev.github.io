@@ -41,7 +41,7 @@ export default function MainMenu() {
             <span className="menu-item" data-target="#employment" onClick={(event) => handleMenuClick(event)}>Employment History</span>
             <span className="menu-item" data-target="#languages" onClick={(event) => handleMenuClick(event)}>Actual Languages</span>
             <span className="menu-item" data-target="#contact" onClick={(event) => handleMenuClick(event)}>Contact</span>
-            <span className="menu-item" data-target="/blog" onClick={(event) => handleMenuClick(event)}>Blog</span>
+            <span className="menu-item" data-target="/short-fiction" onClick={(event) => handleMenuClick(event)}>Short Fiction</span>
         </Menu>
     );
 }
