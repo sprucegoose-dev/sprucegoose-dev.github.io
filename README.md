@@ -1,38 +1,27 @@
-# Getting Started with Create React App
+# Portfolio site
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This portfolio is built with React and Vite, with static assets served from GitHub Pages.
 
-## Available Scripts
+## Local development
 
-In the project directory, you can run:
+```bash
+npm install
+npm run dev
+```
 
-### `npm start`
+The app runs on http://localhost:3000 by default.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Production build
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```bash
+npm run build
+npm run preview
+```
 
-### `npm test`
+## Deploy to GitHub Pages
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+npm run deploy
+```
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run predeploy`
-
-Builds the app for deployment to GitHub Pages.
-
-### `npm run deploy`
-
-Deploys the app to GitHub Pages.
+This project uses a hash-based router so the site works correctly when hosted as a static GitHub Pages site.

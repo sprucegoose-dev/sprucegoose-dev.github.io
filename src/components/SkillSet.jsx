@@ -10,10 +10,20 @@ export default class SkillSet extends Component {
 
         this.state = {
             skills: [
+				{
+                    name: 'TypeScript',
+                    level: 9,
+                    image: basePath + 'ts-logo.webp',
+                },
                 {
                     name: 'JavaScript',
                     level: 9,
                     image: basePath + 'js-logo.png',
+                },
+				{
+                    name: 'Node',
+                    level: 8,
+                    image: basePath + 'node-logo.png',
                 },
                 {
                     name: 'React',
@@ -33,7 +43,32 @@ export default class SkillSet extends Component {
                 {
                     name: 'Angular',
                     image: basePath + 'angular-logo.svg',
-                    level: 6,
+                    level: 5,
+                },
+				{
+                    name: 'GraphQL',
+                    level: 7,
+                    image: basePath + 'terraform-logo.png',
+                },
+				{
+                    name: 'Apollo',
+                    level: 7,
+                    image: basePath + 'aws-logo.png',
+                },
+				{
+                    name: 'AWS',
+                    level: 7,
+                    image: basePath + 'apollo-logo.png',
+                },
+				{
+                    name: 'Terraform',
+                    level: 7,
+                    image: basePath + 'graphql-logo.png',
+                },
+				{
+                    name: 'Material-UI',
+                    level: 8,
+                    image: basePath + 'material-ui-logo.jpg',
                 },
                 {
                     name: 'PHP',
@@ -44,11 +79,6 @@ export default class SkillSet extends Component {
                     name: 'Laravel',
                     level: 7,
                     image: basePath + 'laravel-logo.png',
-                },
-                {
-                    name: 'Node',
-                    level: 8,
-                    image: basePath + 'node-logo.png',
                 },
                 {
                     name: 'Socket.io',
