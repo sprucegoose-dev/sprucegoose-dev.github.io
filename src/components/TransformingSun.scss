@@ -1,0 +1,104 @@
+$sun-color: #EBCB6B;
+$stroke-color: #5A4E29;
+$total-duration: 12s;
+
+.transforming-sun {
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+  filter: drop-shadow(0 18px 18px rgba(90, 78, 41, 0.12));
+}
+
+.transforming-sun__svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  display: block;
+}
+
+.sun-shape,
+.book-shape,
+.d20-shape,
+.computer-shape {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.sun-shape {
+  animation: morphSun $total-duration infinite ease-in-out;
+}
+
+.book-shape {
+  opacity: 0;
+  animation: morphBook $total-duration infinite ease-in-out;
+}
+
+.d20-shape {
+  opacity: 0;
+  animation: morphD20 $total-duration infinite ease-in-out;
+}
+
+.computer-shape {
+  opacity: 0;
+  animation: morphComputer $total-duration infinite ease-in-out;
+}
+
+.computer-cursor {
+  animation: blinkCursor 1s infinite steps(2, start);
+  transform-origin: center;
+}
+
+@keyframes morphSun {
+  0%, 20% { transform: scale(1) rotate(0deg); opacity: 1; }
+  25%, 90% { transform: scale(0.82) rotate(-8deg); opacity: 0; }
+  95%, 100% { transform: scale(1) rotate(0deg); opacity: 1; }
+}
+
+@keyframes morphBook {
+  0%, 20% { opacity: 0; transform: scale(0.72) translateY(12px) rotate(-5deg); }
+  25%, 45% { opacity: 1; transform: scale(1) translateY(0) rotate(0deg); }
+  50%, 100% { opacity: 0; transform: scale(0.72) translateY(-12px) rotate(5deg); }
+}
+
+@keyframes morphD20 {
+  0%, 45% { opacity: 0; transform: scale(0.74) rotate(-18deg) translateY(8px); }
+  50%, 70% { opacity: 1; transform: scale(1) rotate(0deg) translateY(0); }
+  75%, 100% { opacity: 0; transform: scale(0.74) rotate(18deg) translateY(-8px); }
+}
+
+@keyframes morphComputer {
+  0%, 70% { opacity: 0; transform: scale(0.82) translateY(10px) rotate(4deg); }
+  75%, 90% { opacity: 1; transform: scale(1) translateY(0) rotate(0deg); }
+  95%, 100% { opacity: 0; transform: scale(0.82) translateY(-10px) rotate(-4deg); }
+}
+
+@keyframes blinkCursor {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sun-shape,
+  .book-shape,
+  .d20-shape,
+  .computer-shape,
+  .computer-cursor {
+    animation: none !important;
+  }
+
+  .sun-shape {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .book-shape,
+  .d20-shape,
+  .computer-shape {
+    opacity: 0 !important;
+  }
+}

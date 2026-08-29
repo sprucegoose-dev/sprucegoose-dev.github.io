@@ -22,10 +22,20 @@ a { color: var(--coral); text-decoration-thickness: 2px; text-underline-offset: 
 a:hover, a:focus, a:active { color: var(--coral); }
 .container { max-width: 1180px; margin: 0 auto; padding: 0 28px; }
 .header { background: var(--cream); border-bottom: 1px solid var(--line); min-height: 570px; overflow: hidden; position: relative; }
-.header:after { background: var(--yellow); border-radius: 50%; content: ''; height: 360px; opacity: .85; position: absolute; right: 8%; top: 80px; width: 360px; }
+.header:after { display: none; }
 .header.short-fiction:after {
     background: #f9efb5;
     box-shadow: inset -14px -14px 0 rgba(159, 169, 181, .12), 0 0 0 10px rgba(255, 255, 255, .05);
+}
+.header-visual {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    right: clamp(2rem, 7vw, 9rem);
+    top: clamp(2.5rem, 6vw, 4.5rem);
+    width: clamp(180px, 28vw, 420px);
+    z-index: 0;
 }
 .header.short-fiction:before {
     background:

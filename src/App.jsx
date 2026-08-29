@@ -1,6 +1,7 @@
 import { Routes, Route, useLocation } from 'react-router-dom';
 
 import './style/style.scss';
+import TransformingSun from './components/TransformingSun';
 import ShortFiction from './components/ShortFiction';
 import Homepage from './components/Homepage';
 import MainMenu from './components/MainMenu';
@@ -13,6 +14,11 @@ export default function App() {
         <main>
             <MainMenu />
             <header className={`header${isShortFictionPage ? ' short-fiction' : ''}`}>
+                {!isShortFictionPage && (
+                    <div className="header-visual" aria-hidden="true">
+                        <TransformingSun />
+                    </div>
+                )}
                 <div className={`header-inner${isShortFictionPage ? ' short-fiction' : ''}`}>
                     <p className="eyebrow">Morgan Polak <span>///</span> Senior software engineer</p>
                     {isShortFictionPage ? (
