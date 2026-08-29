@@ -1,22 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-export default class Skill extends Component {
-
-    constructor(props) {
-        super(props);
-        this.classes = `progress-circle ${props.name}-progress-circle`;
-        this.imageSrc = `images/${props.image}`;
-    }
-
-    render() {
-        return (
-            <li className="skill">
-                <div className={this.classes}>
-                    <span>
-                        <img className="logo" src={this.imageSrc} alt={this.props.name} title={this.props.name} />
-                    </span>
-                </div>
-            </li>
-        );
-    }
+export default function Skill({ name, image, level }) {
+    return (
+        <li className="skill" style={{ '--skill-level': `${level * 10}%` }}>
+            <div className="progress-circle" aria-label={`${name}: ${level} out of 10`}>
+                <span>
+                    <img className="logo" src={`images/${image}`} alt="" title={name} />
+                </span>
+            </div>
+            <span className="skill-name">{name}</span>
+        </li>
+    );
 }

@@ -1,163 +1,59 @@
-import React, { Component } from 'react';
-import $ from 'jquery';
-import ReactTouchEvents from "react-touch-events";
-import axios from 'axios';
+import React, { useState } from 'react';
 
-export default class ContactForm extends Component {
+const initialForm = { name: '', email: '', message: '', website: '' };
 
-    constructor(props) {
-        super(props);
+export default function ContactForm() {
+    const [form, setForm] = useState(initialForm);
+    const [state, setState] = useState('idle');
 
-        this.state = {
-            form: {
-                name: '',
-                email: '',
-                message: '',
-            },
-            captcha: false,
-            submitted: false,
-            explanation: false,
-        }
+    const handleChange = ({ target }) => {
+        setForm((current) => ({ ...current, [target.name]: target.value }));
+    };
 
-        this.handleChange = this.handleChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
-        this.cloneFox = this.cloneFox.bind(this);
-    }
-
-    componentDidMount() {
-        const intervalId = setInterval(this.cloneFox, 13200);
-        // // store intervalId in the state so it can be accessed later:
-        this.setState({intervalId: intervalId});
-    }
-
-    componentWillUnmount() {
-        // // use intervalId from the state to clear the interval
-        clearInterval(this.state.intervalId);
-    }
-
-    cloneFox() {
-        const $fox = $('.fox').removeClass('fox').addClass('fox')
-        const $clone = $fox.clone();
-        $clone.on('click touchend', this.validateCaptcha.bind(this));
-        $fox.replaceWith($clone);
-    }
-
-    handleChange(event) {
-        const form = { ...this.state.form };
-        form[event.target.name] = event.target.value;
-        this.setState({ form });
-    }
-
-    validateCaptcha() {
-        if (!this.state.captcha) {
-            this.setState({
-                captcha: true,
-                explanation: false
-            });
-        }
-    }
-
-    explainCaptcha() {
-        if (!this.state.captcha && !this.state.explanation) {
-            this.setState({ explanation: true });
-        }
-    }
-
-    resetForm() {
-        const self = this;
-
-        self.setState({
-            form: {
-                name: '',
-                email: '',
-                message: '',
-            },
-            captcha: false,
-        });
-
-        setTimeout(function() {
-            self.setState({
-               submitted: false,
-            });
-        }, 3000);
-    }
-
-    handleSubmit(event) {
+    const handleSubmit = async (event) => {
         event.preventDefault();
+        if (form.website) return;
 
-        const self = this;
+        const endpoint = import.meta.env.VITE_CONTACT_ENDPOINT;
+        const payload = { name: form.name, email: form.email, message: form.message };
+        setState('sending');
 
-        if (!this.state.captcha) {
-            // show captcha alert
-            console.log('Invalid captcha');
+        if (!endpoint) {
+            window.location.href = `mailto:morgan@sprucegoose.dev?subject=Portfolio%20message%20from%20${encodeURIComponent(form.name)}&body=${encodeURIComponent(`${form.message}\n\nReply to: ${form.email}`)}`;
+            setState('sent');
             return;
         }
 
-        axios.post('http://35.158.122.245/api/sendMail', this.state.form)
-            .then(function (response) {
-                // alert success
-                self.setState({ submitted: true });
-                self.resetForm();
-            })
-            .catch(function (error) {
-                console.log(error);
+        try {
+            const response = await fetch(endpoint, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload),
             });
-    }
+            if (!response.ok) throw new Error('Unable to send message');
+            setForm(initialForm);
+            setState('sent');
+        } catch (error) {
+            setState('error');
+        }
+    };
 
-    render() {
-
-        const overlayClass = 'overlay' + (this.state.captcha ? ' visible' : '');
-        const confirmationClass = 'confirmation' + (this.state.submitted ? ' visible' : '');
-        const explanationClass = 'explanation' + (this.state.explanation ? ' visible' : '');
-
-        return (
-            <form id="contact-us" onSubmit={this.handleSubmit}>
-                <div className={confirmationClass}>Sent <img className="checkmark" src="checkmark-white.png" alt="checkmark" /></div>
-                <input name="name" className="form-input" placeholder="Name" autoComplete="off" value={this.state.form.name} onChange={this.handleChange} required />
-                <input name="email" type="email" className="form-input" placeholder="Email" autoComplete="off" value={this.state.form.email} onChange={this.handleChange} required />
-                <textarea name="message" className="form-input" placeholder="Message" autoComplete="off" value={this.state.form.message} onChange={this.handleChange} />
-                <div className="stage">
-                    <div className={explanationClass}>
-                        Catch the fox
-                    </div>
-                    <div className={overlayClass}>
-                        <div className="checkmark" >
-                            <img src="images/checkmark.png" alt="checkmark" />
-                        </div>
-                    </div>
-                    <span className="element sun">
-                        <img src="images/sun2.png" className="image" alt="Sun" />
-                    </span>
-                    <span className="element cloud2">
-                                <img src="images/cloud2.png" className="image" alt="Cloud"  />
-                            </span>
-                    <span className="element cloud3">
-                                <img src="images/cloud2.png" className="image" alt="Cloud"/>
-                            </span>
-                    <span className="element scenery tree1">
-                                <img src="images/tree01.png" className="image" alt="Tree" />
-                            </span>
-                    <span className="element scenery tree2">
-                                <img src="images/tree02.png" className="image" alt="Tree"/>
-                            </span>
-                    <span className="element scenery rock1">
-                                <img src="images/rock01.png" className="image" alt="Rock" />
-                            </span>
-                    <ReactTouchEvents onTap={ this.validateCaptcha.bind(this)}>
-                        <div className="fox" onClick={this.validateCaptcha.bind(this)}>
-                        </div>
-                    </ReactTouchEvents>
-
-                </div>
-
-                <ReactTouchEvents onTap={ this.explainCaptcha.bind(this) }>
-                    <button className="submit-btn" onClick={this.explainCaptcha.bind(this)}>
-                        Send
-                    </button>
-                </ReactTouchEvents>
-
-                <div className="instructions">Pssst... Catch the fox to prove you're human.</div>
-            </form>
-        );
-    }
+    return (
+        <form id="contact-us" className="contact-form" onSubmit={handleSubmit}>
+            <div className="contact-copy">
+                <p className="eyebrow">Open to good problems</p>
+                <h2>Have a project in mind?</h2>
+                <p>Tell me what you are building, fixing, or trying to make more fun.</p>
+            </div>
+            <div className="form-fields">
+                <label>Name<input name="name" value={form.name} onChange={handleChange} required /></label>
+                <label>Email<input name="email" type="email" value={form.email} onChange={handleChange} required /></label>
+                <label className="full-width">Message<textarea name="message" value={form.message} onChange={handleChange} rows="5" required /></label>
+                <label className="honeypot" aria-hidden="true">Website<input name="website" tabIndex="-1" autoComplete="off" value={form.website} onChange={handleChange} /></label>
+                <button className="button button-primary" type="submit" disabled={state === 'sending'}>{state === 'sending' ? 'Sending...' : 'Send message ->'}</button>
+                {state === 'sent' && <p className="form-status">Thanks. Your message is on its way.</p>}
+                {state === 'error' && <p className="form-status form-error">That did not go through. Please try again or email me directly.</p>}
+            </div>
+        </form>
+    );
 }

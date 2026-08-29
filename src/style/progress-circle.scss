@@ -1,14 +1,11 @@
-$barColor: #52a7b5;
-$bkgColor: #e6e6e6;
-
 .progress-circle {
   position: relative;
   display: inline-block;
-  margin: 1rem;
-  width: 66px;
-  height: 66px;
+  width: 72px;
+  height: 72px;
   border-radius: 50%;
-  background-color: $bkgColor; }
+  background: conic-gradient(var(--skill-color, #ec6d4f) var(--skill-level), #e8dfd3 0);
+}
 
 .progress-circle:after {
   content: '';
@@ -19,34 +16,18 @@ $bkgColor: #e6e6e6;
 }
 
 .progress-circle span {
-  font-size: 1rem;
-  color: #8b8b8b;
+  color: #fffaf2;
   position: absolute;
   left: 50%;
   top: 50%;
   display: block;
-  width: 60px;
-  height: 60px;
-  line-height: 60px;
+  width: 62px;
+  height: 62px;
+  line-height: 62px;
   text-align: center;
   border-radius: 50%;
-  background: #fff;
+  background: #263238;
   z-index: 1;
   transform: translate(-50%, -50%);
 }
 
-@mixin progress-circle($percentage, $barColor) {
-  $degreesA: 90;
-  $degreesB: 90;
-  $barColorA: $bkgColor; // $bkgColor is declared at the top of the document
-
-  @if $percentage > 49 {
-      $degreesA: -90 + (($percentage - 50) * 3.6);
-      $degreesB: 270;
-      $barColorA: $barColor;
-  } @else {
-    $degreesB: $degreesA + ($percentage * 3.6);
-  }
-
-  background-image: linear-gradient($degreesA + deg, $barColorA 50%, transparent 50%, transparent), linear-gradient($degreesB + deg, $barColor 50%, $bkgColor 50%, $bkgColor);
-}

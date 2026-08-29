@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
-import moment from 'moment';
 import _ from 'lodash';
 
 import BlogPost from './BlogPost';
@@ -44,7 +43,7 @@ export default function Blog() {
                 });
             }
 
-            updatedPosts.sort((postA, postB) => moment(postB.createdAt).unix() - moment(postA.createdAt).unix());
+            updatedPosts.sort((postA, postB) => new Date(postB.createdAt) - new Date(postA.createdAt));
 
             setPosts(updatedPosts);
         }

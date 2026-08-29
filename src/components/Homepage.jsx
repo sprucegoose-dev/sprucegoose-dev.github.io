@@ -7,7 +7,7 @@ import ContactForm from './ContactForm';
 export default function Homepage() {
     return (
         <div className="homepage col-md-12">
-            <span className="title" data-anchor="#in-a-nutshell">In A Nutshell</span>
+            <span id="in-a-nutshell" className="title" data-anchor="#in-a-nutshell">In A Nutshell</span>
             <section className="intro clearfix">
                 <div className="aside aside-right short">
                     <img src="images/walnut.png" className="image" alt="Walnut" />
@@ -36,11 +36,11 @@ export default function Homepage() {
                     </p>
                 </div>
             </section>
-            <span className="title" data-anchor="#languages-and-frameworks">Languages & Frameworks</span>
+            <span id="languages-and-frameworks" className="title" data-anchor="#languages-and-frameworks">Languages & Frameworks</span>
             <section className="languages-and-frameworks">
                 <SkillSet />
             </section>
-            <span className="title" data-anchor="#projects">Recent Projects</span>
+            <span id="projects" className="title" data-anchor="#projects">Recent Projects</span>
             <section className="projects">
                 <div className="content clearfix">
                     <Project
@@ -114,7 +114,7 @@ export default function Homepage() {
                     />
                 </div>
             </section>
-            <span className="title" data-anchor="#employment">Employment History</span>
+            <span id="employment" className="title" data-anchor="#employment">Employment History</span>
             <section className="employment timeline">
 				<TimelineEvent
                     date="Aug 2025 - Present"
@@ -171,7 +171,7 @@ export default function Homepage() {
                     markerImg="saturn.png"
                 />
             </section>
-            <span className="title" data-anchor="#education">Education</span>
+            <span id="education" className="title" data-anchor="#education">Education</span>
             <section className="education timeline">
                 <TimelineEvent
                     date="2022 - Present"
@@ -198,14 +198,14 @@ export default function Homepage() {
                     attribution="Freepik - Flaticon"
                 />
             </section>
-            <span className="title" data-anchor="#languages">And... Actual Languages!</span>
+            <span id="languages" className="title" data-anchor="#languages">And... Actual Languages!</span>
             <section className="languages-section section text-center">
                 <ul className="languages">
                     <li><strong>Hebrew:</strong> Native speaker</li>
                     <li><strong>English:</strong> Native-speaker level</li>
                 </ul>
             </section>
-            <span className="title" data-anchor="#contact">Get In Touch</span>
+            <span id="contact" className="title" data-anchor="#contact">Get In Touch</span>
             <section className="section text-center clearfix">
                 <ContactForm />
             </section>
