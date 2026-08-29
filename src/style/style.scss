@@ -73,7 +73,7 @@ section { padding: 10px 0 25px; }
 .skill-set { display: grid; gap: 28px 18px; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); list-style: none; margin: 0 auto; max-width: 1124px; padding: 0; text-align: center; }
 .skill { color: var(--ink); font-family: 'VT323', monospace; font-size: 1.1rem; }
 .skill-name { display: block; margin-top: 2px; }
-.logo { height: 38px; max-height: 38px; max-width: 42px; width: auto; }
+.logo { height: auto; max-height: 38px; max-width: 44px; width: auto; }
 .projects .content { display: grid; gap: 22px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .projects .project { background: #fff; border: 1px solid var(--line); box-shadow: 5px 5px 0 rgba(74, 74, 74, .28); min-height: 0; min-width: 0; overflow-wrap: anywhere; padding: 18px; }
 .projects .project-image { align-items: center; display: flex; height: 220px; justify-content: center; }

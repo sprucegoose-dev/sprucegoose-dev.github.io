@@ -1,5 +1,3 @@
-import React from 'react';
-
 export default function Skill({ name, image, level, color }) {
     return (
         <li className="skill" style={{ '--skill-color': color, '--skill-level': `${level * 10}%` }}>
