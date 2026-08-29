@@ -28,8 +28,8 @@ export default function Homepage() {
 						I've also designed five original board games, and in 2021 I self-published
 						my first fantasy novel,
 						&nbsp;<a href="https://www.amazon.co.uk/Dimsdales-Fire-M-Polak/dp/1739911504" target="_blank" rel="noreferrer">Dimsdale's Fire</a>
-						&nbsp;— a comedic adventure about a reluctant,
-						&nbsp;out-of-shape hero whose mysterious skin rash has the unfortunate habit of releasing magic at random.
+						&nbsp;— a comedic adventure about a reluctant, out-of-shape hero whose mysterious skin rash has the unfortunate
+						&nbsp;habit of releasing magic at random.
 	                    </div>
 					<div>
 						I have a BA in English Literature from Hunter College in New York and an MA in English Studies from the University of Nottingham.
