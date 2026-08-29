@@ -202,13 +202,6 @@ export default function Homepage() {
                     <img src="images/asteroid.png" className="image" alt="" />
                 </div>
             </section>
-            <div id="languages" className="title" data-anchor="#languages">And... Actual Languages!</div>
-            <section className="languages-section section text-center">
-                <ul className="languages">
-                    <li><strong>Hebrew:</strong> Native speaker</li>
-                    <li><strong>English:</strong> Native-speaker level</li>
-                </ul>
-            </section>
             <div id="contact" className="title" data-anchor="#contact">Get In Touch</div>
             <section className="section text-center clearfix">
                 <ContactForm />

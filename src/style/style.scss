@@ -37,10 +37,10 @@ h1 em { color: var(--coral); font-style: normal; }
 .button-quiet:hover, .button-quiet:focus { background: var(--yellow); color: var(--ink); }
 .header-stamp { border: 2px solid var(--ink); border-radius: 50%; font-family: 'VT323', monospace; font-size: 1.35rem; line-height: 1; padding: 18px 12px; position: absolute; right: 20%; text-align: center; top: 350px; transform: rotate(11deg); }
 .homepage { max-width: 100%; }
-.title { color: var(--teal); font-family: 'VT323', monospace; font-size: 1.55rem; justify-content: flex-start; letter-spacing: .04em; margin: 156px auto 0; max-width: 930px; text-align: left; text-transform: uppercase; width: 100%; }
+.title { color: var(--teal); font-family: 'VT323', monospace; font-size: 1.55rem; justify-content: flex-start; letter-spacing: .04em; margin: 25px auto 0; max-width: 930px; text-align: left; text-transform: uppercase; width: 100%; }
 .title:before, .title:after { border-color: var(--line); }
 .title-intro { margin-top: 25px; }
-section { padding: 25px 0; }
+section { padding: 10px 0 25px; }
 .intro { font-size: 1.08rem; margin: 0 auto; max-width: 930px; }
 .intro .content { display: flex; flex-direction: column; gap: 18px; }
 .intro .aside { display: none; }
