@@ -23,6 +23,20 @@ a:hover, a:focus, a:active { color: var(--coral); }
 .container { max-width: 1180px; margin: 0 auto; padding: 0 28px; }
 .header { background: var(--cream); border-bottom: 1px solid var(--line); min-height: 570px; overflow: hidden; position: relative; }
 .header:after { background: var(--yellow); border-radius: 50%; content: ''; height: 360px; opacity: .85; position: absolute; right: 8%; top: 80px; width: 360px; }
+.header.short-fiction {
+    background:
+        radial-gradient(circle at 14% 18%, rgba(255, 255, 255, .7) 0 1.8px, transparent 2.4px),
+        radial-gradient(circle at 26% 32%, rgba(255, 255, 255, .62) 0 1.6px, transparent 2.2px),
+        radial-gradient(circle at 40% 22%, rgba(255, 255, 255, .75) 0 1.7px, transparent 2.3px),
+        radial-gradient(circle at 58% 18%, rgba(255, 255, 255, .66) 0 1.8px, transparent 2.4px),
+        radial-gradient(circle at 74% 28%, rgba(255, 255, 255, .68) 0 1.9px, transparent 2.5px),
+        radial-gradient(circle at 88% 20%, rgba(255, 255, 255, .72) 0 1.7px, transparent 2.3px),
+        radial-gradient(circle at 18% 72%, rgba(255, 255, 255, .58) 0 1.5px, transparent 2.1px),
+        radial-gradient(circle at 44% 80%, rgba(255, 255, 255, .65) 0 1.8px, transparent 2.4px),
+        radial-gradient(circle at 70% 68%, rgba(255, 255, 255, .7) 0 1.7px, transparent 2.3px),
+        radial-gradient(circle at 82% 74%, rgba(255, 255, 255, .64) 0 1.8px, transparent 2.4px),
+        linear-gradient(180deg, #0b1220 0%, #1b2a3e 100%);
+}
 .header.short-fiction:after {
     background: #f9efb5;
     box-shadow: inset -14px -14px 0 rgba(159, 169, 181, .12), 0 0 0 10px rgba(255, 255, 255, .05);
@@ -53,6 +67,13 @@ a:hover, a:focus, a:active { color: var(--coral); }
 .eyebrow span { color: var(--teal); margin: 0 8px; }
 h1 { font-family: 'Megrim', Georgia, serif; font-size: clamp(3.5rem, 8vw, 7.4rem); font-weight: 400; letter-spacing: 0; line-height: .95; margin: 0; max-width: 820px; }
 h1 em { color: var(--coral); font-style: normal; }
+.header.short-fiction h1 {
+    color: #f5efe7;
+    text-shadow: 0 2px 0 rgba(10, 14, 22, .26), 0 5px 18px rgba(8, 10, 18, .68), 0 10px 30px rgba(8, 10, 18, .38);
+}
+.header.short-fiction h1 em { color: #f7c86a; }
+.header.short-fiction .eyebrow { color: #f8d98f; text-shadow: 0 2px 0 rgba(10, 14, 22, .18), 0 5px 18px rgba(8, 10, 18, .56); }
+.header.short-fiction .header-summary { color: #edf4ff; text-shadow: 0 2px 0 rgba(10, 14, 22, .18), 0 5px 16px rgba(8, 10, 18, .5); }
 .header-summary { font-size: 1.2rem; margin: 30px 0; max-width: 530px; }
 .header-actions { display: flex; flex-wrap: wrap; gap: 12px; }
 .button { border: 2px solid var(--ink); display: inline-block; font-family: 'Megrim', Georgia, serif; font-size: 1rem; font-weight: 700; padding: 9px 16px; text-decoration: none; }
