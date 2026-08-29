@@ -13,7 +13,7 @@ export default function App() {
                 <div className="header-inner">
                     <p className="eyebrow">Morgan Polak <span>///</span> Senior software engineer</p>
                     <h1>Building useful things<br /><em>with a little mischief.</em></h1>
-                    <p className="header-summary">Full-stack engineer, board game designer, digital adapter, and fiction writer based in the UK.</p>
+                    <p className="header-summary">Full-stack engineer, board game designer, creator of digital game adaptations, and fiction writer based in the UK.</p>
                     <div className="header-actions">
                         <a className="button button-primary" href="#projects">See selected work <span aria-hidden="true">-&gt;</span></a>
                         <a className="button button-quiet" href="#contact">Start a conversation</a>

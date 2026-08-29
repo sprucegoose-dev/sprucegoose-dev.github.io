@@ -14,31 +14,27 @@ export default function Homepage() {
                 </div>
                 <div className="content">
                     <div>
-                        Welcome!
+                       I'm Morgan Polak, a full-stack engineer with over 10 years of experience building web applications with React, Vue, and Node.js.
                     </div>
                     <div>
-                        My name is Morgan Polak and I'm a full-stack web developer with 10 years of experience specializing in React, Vue, and Node.js.
+                      I'm also a board game designer, creator of digital adaptations of board games, and fiction writer.
                     </div>
                     <div>
-                        I also enjoy creative writing and have a BA in English Literature from Hunter College (NY),
-                         and an MA in English Studies from the University of Nottingham (UK). You can check out some of my short
-                         stories on the blog page.
+						During lockdown in 2020, I built a digital adaptation of one of my favourite board games, War Chest.
+						<a href="https://warchestonline.com/" target="_blank" rel="noreferrer">War Chest Online</a> now has more than 50,000
+						 registered users and has hosted over 1.5 million games.
                     </div>
                     <div>
-                        In 2020, during lockdown, I created a digital adaptation of one of my favourite board games, War Chest.
-                        You can check it out on <a href="https://warchestonline.com/" target="_blank" rel="noreferrer">warchestonline.com</a>.
-                        There are over 50,000 registered users, and over 1.5 million games have been played.
-                    </div>
-                    <div>
-                        In 2021, I self-published my first fantasy novel, <a href="https://www.amazon.co.uk/Dimsdales-Fire-M-Polak/dp/1739911504" target="_blank" rel="noreferrer">
-                            Dimsdale's Fire</a>, a comedic adventure about a reluctant, out-of-shape hero who
-							develops a mysterious skin rash that releases magic at random, forcing him to go on a quest
-							for a cure.
+						I've also designed five original board games, and in 2021 I self-published
+						my first fantasy novel,
+						<a href="https://www.amazon.co.uk/Dimsdales-Fire-M-Polak/dp/1739911504" target="_blank" rel="noreferrer">Dimsdale's Fire</a>
+						 — a comedic adventure about a reluctant,
+						out-of-shape hero whose mysterious skin rash has the unfortunate habit of releasing magic at random.
 	                    </div>
 					<div>
-						I also designed five original board games! :)
+						I have a BA in English Literature from Hunter College in New York and an MA in English Studies from the University of Nottingham.
+						 I also write short fiction, some of which you can find on the blog.
 					</div>
-
                 </div>
             </section>
             <span id="languages-and-frameworks" className="title" data-anchor="#languages-and-frameworks">Tech Stack</span>
