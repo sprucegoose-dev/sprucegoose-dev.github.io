@@ -27,7 +27,7 @@ export default function Homepage() {
                     <p>
                         In 2020, during lockdown, I created a digital adaptation of one of my favourite board games, War Chest.
                         You can check it out on <a href="https://warchestonline.com/" target="_blank" rel="noreferrer">warchestonline.com</a>.
-                        There are over 45,000 registered users, and nearly 1 million games have been played.
+                        There are over 50,000 registered users, and over 1.5 million games have been played.
                     </p>
                     <p>
                         In 2021, I self-published my first fantasy novel, <a href="https://www.amazon.co.uk/Dimsdales-Fire-M-Polak/dp/1739911504" target="_blank" rel="noreferrer">
@@ -130,7 +130,7 @@ export default function Homepage() {
                     title="Senior Engineer at Savi"
                     subtitle="United Kingdom (Remote)"
                     description="Senior full-stack developer at a company that specializes in coupons and promotions."
-                    markerImg="sun.png"
+                    markerImg="venus.png"
                 />
                 <TimelineEvent
                     date="Jan 2019 - Apr 2023"
@@ -152,7 +152,7 @@ export default function Homepage() {
                     description="Full-stack development in Laravel, Node, React, and other frameworks and technologies. Database management in MySQL and MongoDB. Server administration mostly on Ubuntu/Centos running Apache.
 
     Projects included admin panels, APIs, task automation, and front-end development."
-                    markerImg="venus.png"
+                    markerImg="earth.png"
                 />
                 <TimelineEvent
                     date="Dec 2012 - Sept 2015"
@@ -160,7 +160,7 @@ export default function Homepage() {
                     title="Account Director at Voxme Software, Inc."
                     subtitle="Tel Aviv, Israel"
                     description="Responsible for sales of the company's mobile app, as well as training new clients and providing ongoing technical support."
-                    markerImg="earth.png"
+                    markerImg="mars.png"
                 />
                 <TimelineEvent
                     date="Dec 2011 - Oct 2012"
@@ -168,7 +168,7 @@ export default function Homepage() {
                     title="Content Manager at USHOPS"
                     subtitle="Yokneam, Israel"
                     description="Writing and editing content in English and Hebrew, and maintaining the company's blog, Facebook page, and marketing campaigns."
-                    markerImg="mars.png"
+                    markerImg="saturn.png"
                 />
             </section>
             <span className="title" data-anchor="#education">Education</span>
@@ -178,14 +178,14 @@ export default function Homepage() {
                     side="right"
                     title="MA in English Studies"
                     subtitle="University of Nottingham, Nottingham, United Kingdom"
-                    markerImg="saturn.png"
+                    markerImg="uranus.png"
                 />
                 <TimelineEvent
                     date="2014 - 2015"
                     side="right"
                     title="English Teaching Certificate"
                     subtitle="Levinsky College of Education, Tel Aviv, Israel"
-                    markerImg="uranus.png"
+                    markerImg="neptune.png"
                     attribution="vectorspoint - Flaticon"
                 />
                 <TimelineEvent
@@ -194,7 +194,7 @@ export default function Homepage() {
                     title="B.A. in English Literature, Language, and Criticism"
                     subtitle="Hunter College, New York, NY, USA"
                     description="3.892/4.00 GPA / Magna Cum Laude / Honors in the English Dept."
-                    markerImg="neptune.png"
+                    markerImg="asteroid.png"
                     attribution="Freepik - Flaticon"
                 />
             </section>
