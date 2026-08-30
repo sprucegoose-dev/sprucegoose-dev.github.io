@@ -20,7 +20,7 @@ html { scroll-behavior: smooth; }
 body { background: var(--paper); color: var(--ink); font-family: 'Figtree', 'Roboto Slab', Georgia, serif; font-weight: 400; line-height: 1.65; margin: 0; overflow-x: hidden; }
 a { color: var(--coral); text-decoration-thickness: 2px; text-underline-offset: 3px; }
 a:hover, a:focus, a:active { color: var(--coral); }
-.container { max-width: 1180px; margin: 0 auto; padding: 0 28px; }
+.container { max-width: 1180px; margin: 0 auto; padding: 28px; }
 .header { background: var(--cream); border-bottom: 1px solid var(--line); min-height: 570px; overflow: hidden; position: relative; }
 .header:after { background: var(--yellow); border-radius: 50%; content: ''; height: 360px; opacity: .85; position: absolute; right: 8%; top: 80px; width: 360px; }
 .header.short-fiction {
@@ -70,6 +70,7 @@ h1 em { color: var(--coral); font-style: normal; }
     color: #f5efe7;
     text-shadow: 0 2px 0 rgba(10, 14, 22, .26), 0 5px 18px rgba(8, 10, 18, .68), 0 10px 30px rgba(8, 10, 18, .38);
 }
+h2 { margin: 0; }
 .header.short-fiction h1 em { color: #f7c86a; }
 .header.short-fiction .eyebrow { color: #f8d98f; text-shadow: 0 2px 0 rgba(10, 14, 22, .18), 0 5px 18px rgba(8, 10, 18, .56); }
 .header.short-fiction .header-summary { color: #edf4ff; text-shadow: 0 2px 0 rgba(10, 14, 22, .18), 0 5px 16px rgba(8, 10, 18, .5); }
@@ -81,11 +82,10 @@ h1 em { color: var(--coral); font-style: normal; }
 .button-quiet { color: var(--ink); }
 .button-quiet:hover, .button-quiet:focus { background: var(--yellow); color: var(--ink); }
 .header-stamp { border: 2px solid var(--ink); border-radius: 50%; font-family: 'VT323', monospace; font-size: 1.35rem; line-height: 1; padding: 18px 12px; position: absolute; right: 20%; text-align: center; top: 350px; transform: rotate(11deg); }
-.homepage { max-width: 100%; }
-.title { color: var(--teal); font-family: 'VT323', monospace; font-size: 1.55rem; justify-content: flex-start; letter-spacing: .04em; margin: 25px 0 0; max-width: 930px; text-align: left; text-transform: uppercase; width: 100%; }
+.homepage { max-width: 100%; display: flex; flex-direction: column; gap: 20px; }
+.title { color: var(--teal); font-family: 'VT323', monospace; font-size: 1.55rem; justify-content: flex-start; letter-spacing: .04em; margin-bottom: 20px; max-width: 930px; text-align: left; text-transform: uppercase; width: 100%; }
 .title:before, .title:after { border-color: var(--line); }
-.title-intro { margin: 25px auto 0; }
-section { padding: 10px 0 25px; }
+.title-intro { margin: 25px auto 18px; }
 .intro { font-size: 1.08rem; margin: 0 auto; max-width: 930px; }
 .intro .content { display: flex; flex-direction: column; gap: 18px; }
 .intro .aside { display: none; }
@@ -127,8 +127,26 @@ section { padding: 10px 0 25px; }
 .projects .technology { background: #fff; border: 1px solid var(--teal); border-radius: 2px; color: var(--ink); display: inline-block; font-family: 'VT323', monospace; font-size: 1.05rem; margin: 0 7px 7px 0; padding: 4px 9px; }
 .projects .separator { display: none; }
 .timeline { margin: 0 auto; max-width: 930px; }
-.timeline { padding-left: 48px; position: relative; }
-.timeline:before { background: var(--line); bottom: 28px; content: ''; left: 22px; position: absolute; top: 28px; width: 2px; }
+.home-section.timeline {
+    margin: 0 auto;
+    max-width: 930px;
+    padding-left: 48px;
+    position: relative;
+    width: 100%;
+}
+.home-section.timeline + .home-section.timeline {
+    margin-top: -28px;
+}
+.home-section.timeline + .home-section.timeline:before {
+    background: var(--line);
+    bottom: 18px;
+    content: '';
+    left: 22px;
+    position: absolute;
+    top: -28px;
+    width: 2px;
+}
+.home-section.timeline:before { background: var(--line); bottom: 18px; content: ''; left: 22px; position: absolute; top: 18px; width: 2px; }
 .event-pair { margin: 0; padding: 0 0 32px; position: relative; }
 .timeline .event { border: 0; margin: 0; padding: 0; text-align: left; width: 100%; }
 .timeline .event-pair .event { border: 0; margin: 0; padding: 0; }
@@ -163,7 +181,6 @@ section { padding: 10px 0 25px; }
 .form-error { color: var(--coral); }
 
 @media (max-width: 700px) {
-    .container { padding: 0 18px; }
     .header-inner { padding: 90px 22px 80px; }
     .header:after { height: 240px; right: -90px; top: 100px; width: 240px; }
     .header.short-fiction:after,

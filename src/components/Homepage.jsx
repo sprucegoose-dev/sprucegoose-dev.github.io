@@ -5,55 +5,55 @@ import Separator from './Separator';
 import SkillSet from './SkillSet';
 import TimelineEvent from './TimelineEvent';
 import ContactForm from './ContactForm';
+import SectionBlock from './SectionBlock';
 
 export default function Homepage() {
     return (
         <div className="homepage col-md-12">
-            <div id="in-a-nutshell" className="title title-intro" data-anchor="#in-a-nutshell">In A Nutshell</div>
-            <section className="intro clearfix">
+            <SectionBlock id="in-a-nutshell" title="In A Nutshell" className="intro">
                 <div className="aside aside-right short">
                     <img src="images/walnut.png" className="image" alt="Walnut" />
                 </div>
                 <div className="content">
                     <div>
-                       I'm Morgan Polak, a full-stack engineer with over 10 years of experience building web applications with React, Vue, and Node.js.
+                        I'm Morgan Polak, a full-stack engineer with over 10 years of experience building web applications with React, Vue, and Node.js.
                     </div>
                     <div>
-                      I'm also a board game designer, creator of digital adaptations of board games, and fiction writer.
+                        I'm also a board game designer, creator of digital adaptations of board games, and fiction writer.
                     </div>
                     <div>
-						During lockdown in 2020, I built a digital adaptation of one of my favourite board games, War Chest. The website,
-						&nbsp;<a href="https://warchestonline.com/" target="_blank" rel="noreferrer">warchestonline.com</a>, now has more than 50,000
-						 registered users, has hosted over 1.5 million games, and was involved in the development of three official expansions.
+                        During lockdown in 2020, I built a digital adaptation of one of my favourite board games, War Chest. The website,
+                        &nbsp;<a href="https://warchestonline.com/" target="_blank" rel="noreferrer">warchestonline.com</a>, now has more than 50,000
+                        registered users, has hosted over 1.5 million games, and was involved in the development of three official expansions.
                     </div>
                     <div>
-						I've also designed five original board games, and in 2021 I self-published
-						my first fantasy novel,
-						&nbsp;<a href="https://www.amazon.co.uk/Dimsdales-Fire-M-Polak/dp/1739911504" target="_blank" rel="noreferrer">Dimsdale's Fire</a>
-						&nbsp;— a comedic adventure about a reluctant, out-of-shape hero whose mysterious skin rash has the unfortunate
-						&nbsp;habit of releasing magic at random.
-	                    </div>
-					<div>
-						I have a BA in English Literature from Hunter College in New York and an MA in English Studies from the University of Nottingham.
-						I also write short fiction, some of which you can read <Link to="/short-fiction">here</Link>.
-					</div>
+                        I've also designed five original board games, and in 2021 I self-published
+                        my first fantasy novel,
+                        &nbsp;<a href="https://www.amazon.co.uk/Dimsdales-Fire-M-Polak/dp/1739911504" target="_blank" rel="noreferrer">Dimsdale's Fire</a>
+                        &nbsp;— a comedic adventure about a reluctant, out-of-shape hero whose mysterious skin rash has the unfortunate
+                        habit of releasing magic at random.
+                    </div>
+                    <div>
+                        I have a BA in English Literature from Hunter College in New York and an MA in English Studies from the University of Nottingham.
+                        I also write short fiction, some of which you can read <Link to="/short-fiction">here</Link>.
+                    </div>
                 </div>
-            </section>
-            <div id="languages-and-frameworks" className="title" data-anchor="#languages-and-frameworks">Tech Stack</div>
-            <section className="languages-and-frameworks">
+            </SectionBlock>
+
+            <SectionBlock id="languages-and-frameworks" title="Tech Stack">
                 <SkillSet />
-            </section>
-            <div id="projects" className="title" data-anchor="#projects">Recent Projects</div>
-            <section className="projects">
+            </SectionBlock>
+
+            <SectionBlock id="projects" title="Recent Projects" className="projects">
                 <div className="content clearfix">
-					<Project
+                    <Project
                         thumbnails={['neutreeno.png']}
                         title="Neutreeno Platform"
                         link="https://neutreeno.com"
                         logo="neutreeno-logo.webp"
                         description="The Neutreeno Platform provides organizations with carbon emissions measurements, insights,
-						 and action-grade decarbonisation plans, powered by advanced emissions modelling and
-						 technologies developed by University of Cambridge climate engineers."
+                        and action-grade decarbonisation plans, powered by advanced emissions modelling and
+                        technologies developed by University of Cambridge climate engineers."
                         technologies={['TypeScript', 'React', 'Node.js', 'GraphQL', 'Apollo', 'Postgres', 'Terraform', 'AWS']}
                     />
                     <Separator />
@@ -63,7 +63,7 @@ export default function Homepage() {
                         link="https://ethnos-online.com"
                         logo="ethnos-logo.webp"
                         description="A digital adaptation of the board game, Ethnos, written in React for the front-end and Node.js for the backend."
-						technologies={['TypeScript', 'React', 'Node.js', 'Socket.io', 'MySQL']}
+                        technologies={['TypeScript', 'React', 'Node.js', 'Socket.io', 'MySQL']}
                     />
                     <Project
                         thumbnails={['warchest-screenshot.png']}
@@ -84,7 +84,7 @@ export default function Homepage() {
                         link="https://appsource.microsoft.com/en-us/product/office/WA200000668"
                         logo="tr-logo.svg"
                         description="The ThoughtRiver Prescreen Word add-in helps lawyers remediate contracts
-                        right in MS Word,  providing a risk analysis, advice, and suggested wording. I've
+                        right in MS Word, providing a risk analysis, advice, and suggested wording. I've
                         been the project lead from its early stages, developing the application in React and
                         integrating it with the Word JavaScript API."
                         technologies={['React/Redux', 'Word JavaScript API']}
@@ -135,10 +135,10 @@ export default function Homepage() {
                         technologies={['Codeigniter 3.0', 'AngularJs', 'MySQL']}
                     />
                 </div>
-            </section>
-            <div id="employment" className="title" data-anchor="#employment">Employment History</div>
-            <section className="employment timeline">
-				<TimelineEvent
+            </SectionBlock>
+
+            <SectionBlock id="employment" title="Employment History" className="employment timeline">
+                <TimelineEvent
                     date="Aug 2025 - Present"
                     side="right"
                     title="Senior Full-Stack Engineer at Neutreeno"
@@ -192,9 +192,9 @@ export default function Homepage() {
                     description="Writing and editing content in English and Hebrew, and maintaining the company's blog, Facebook page, and marketing campaigns."
                     markerImg="jupiter.png"
                 />
-            </section>
-            <div id="education" className="title" data-anchor="#education">Education</div>
-            <section className="education timeline">
+            </SectionBlock>
+
+            <SectionBlock id="education" title="Education" className="education timeline">
                 <TimelineEvent
                     date="2022 - 2023"
                     side="right"
@@ -222,11 +222,11 @@ export default function Homepage() {
                 <div className="timeline-end-marker" aria-label="Asteroid marker">
                     <img src="images/asteroid.png" className="image" alt="" />
                 </div>
-            </section>
-            <div id="contact" className="title" data-anchor="#contact">Get In Touch</div>
-            <section className="section text-center clearfix">
+            </SectionBlock>
+
+            <SectionBlock id="contact" title="Get In Touch" className="text-center clearfix">
                 <ContactForm />
-            </section>
+            </SectionBlock>
         </div>
     );
 }
