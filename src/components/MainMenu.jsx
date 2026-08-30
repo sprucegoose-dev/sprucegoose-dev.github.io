@@ -1,10 +1,35 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { slide as Menu } from 'react-burger-menu';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 export default function MainMenu({ isShortFictionPage }) {
     const [menuOpen, setMenuOpen] = useState(false);
     const navigate = useNavigate();
+    const location = useLocation();
+
+    const scrollToHashTarget = (target) => {
+        const normalizedTarget = target.charAt(0) === '#' ? target : `#${target}`;
+        const $target = document.querySelector(`[data-anchor='${normalizedTarget}']`);
+
+        if ($target) {
+            $target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start',
+            });
+        }
+    };
+
+    useEffect(() => {
+        if (!location.hash) {
+            return;
+        }
+
+        const timeoutId = window.setTimeout(() => {
+            scrollToHashTarget(location.hash);
+        }, 50);
+
+        return () => window.clearTimeout(timeoutId);
+    }, [location.pathname, location.hash]);
 
     const handleMenuClick = (event) => {
         event.preventDefault();
@@ -13,18 +38,22 @@ export default function MainMenu({ isShortFictionPage }) {
 
         const target = event.target.getAttribute('data-target');
 
-        if (target.charAt(0) === '/') {
+        if (target.startsWith('/')) {
             navigate(target);
             return;
         }
 
-        const $target = document.querySelector(`[data-anchor='${target}']`);
-
-        if ($target) {
-            $target.scrollIntoView({
-                behavior: 'smooth',
-            });
+        if (target.startsWith('#')) {
+            if (location.pathname !== '/') {
+                navigate(`/${target}`);
+                window.setTimeout(() => {
+                    scrollToHashTarget(target);
+                }, 100);
+                return;
+            }
         }
+
+        scrollToHashTarget(target);
     };
 
     const handleMenuStateChange = ({ isOpen }) => {
