@@ -196,7 +196,7 @@ export default function Homepage() {
             <div id="education" className="title" data-anchor="#education">Education</div>
             <section className="education timeline">
                 <TimelineEvent
-                    date="2022 - Present"
+                    date="2022 - 2023"
                     side="right"
                     title="MA in English Studies"
                     subtitle="University of Nottingham, Nottingham, United Kingdom"
