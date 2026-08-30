@@ -24,7 +24,7 @@ export default function Homepage() {
                     <div>
 						During lockdown in 2020, I built a digital adaptation of one of my favourite board games, War Chest. The website,
 						&nbsp;<a href="https://warchestonline.com/" target="_blank" rel="noreferrer">warchestonline.com</a>, now has more than 50,000
-						 registered users and has hosted over 1.5 million games.
+						 registered users, has hosted over 1.5 million games, and was involved in the development of three official expansions.
                     </div>
                     <div>
 						I've also designed five original board games, and in 2021 I self-published
