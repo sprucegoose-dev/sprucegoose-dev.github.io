@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { slide as Menu } from 'react-burger-menu';
 import { useNavigate } from 'react-router-dom';
 
-export default function MainMenu() {
+export default function MainMenu({ isShortFictionPage }) {
     const [menuOpen, setMenuOpen] = useState(false);
     const navigate = useNavigate();
 
@@ -32,7 +32,12 @@ export default function MainMenu() {
     };
 
     return (
-        <Menu isOpen={menuOpen} onStateChange={handleMenuStateChange}>
+        <Menu
+            burgerBarClassName={isShortFictionPage ? 'short-fiction-burger-bars' : ''}
+            className={isShortFictionPage ? 'short-fiction-menu' : ''}
+            isOpen={menuOpen}
+            onStateChange={handleMenuStateChange}
+        >
             <span className="menu-item" data-target="/" onClick={(event) => handleMenuClick(event)}>Homepage</span>
             <span className="menu-item" data-target="#in-a-nutshell" onClick={(event) => handleMenuClick(event)}>In A Nutshell</span>
             <span className="menu-item" data-target="#languages-and-frameworks" onClick={(event) => handleMenuClick(event)}>Languages & Frameworks</span>

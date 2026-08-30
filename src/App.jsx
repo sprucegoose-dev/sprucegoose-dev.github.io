@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 
 import './style/style.scss';
@@ -9,9 +10,13 @@ export default function App() {
     const location = useLocation();
     const isShortFictionPage = location.pathname === '/short-fiction';
 
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [location.pathname]);
+
     return (
         <main>
-            <MainMenu />
+            <MainMenu isShortFictionPage={isShortFictionPage} />
             <header className={`header${isShortFictionPage ? ' short-fiction' : ''}`}>
                 <div className={`header-inner${isShortFictionPage ? ' short-fiction' : ''}`}>
                     <p className="eyebrow">Morgan Polak <span>///</span> Senior software engineer</p>
