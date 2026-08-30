@@ -53,7 +53,7 @@ export default function Homepage() {
                         logo="neutreeno-logo.webp"
                         description="The Neutreeno Platform provides organizations with carbon emissions measurements, insights,
 						 and action-grade decarbonisation plans, powered by advanced emissions modelling and
-						 technologies developed by University of Cambridge climate scientists."
+						 technologies developed by University of Cambridge climate engineers."
                         technologies={['TypeScript', 'React', 'Node.js', 'GraphQL', 'Apollo', 'Postgres', 'Terraform', 'AWS']}
                     />
                     <Separator />
