@@ -62,7 +62,7 @@ export default function Homepage() {
                         title="Ethnos Online"
                         link="https://ethnos-online.com"
                         logo="ethnos-logo.webp"
-                        description="A digital adaptation of the board game, Ethons, written in React for the front-end and Node.js for the backend."
+                        description="A digital adaptation of the board game, Ethnos, written in React for the front-end and Node.js for the backend."
 						technologies={['TypeScript', 'React', 'Node.js', 'Socket.io', 'MySQL']}
                     />
                     <Project
