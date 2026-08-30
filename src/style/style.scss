@@ -146,7 +146,19 @@ h2 { margin: 0; }
     top: -28px;
     width: 2px;
 }
-.home-section.timeline:before { background: var(--line); bottom: 18px; content: ''; left: 22px; position: absolute; top: 18px; width: 2px; }
+.home-section.timeline:before {
+    background: var(--line);
+    bottom: 18px;
+    content: '';
+    left: 22px;
+    position: absolute;
+    top: 18px;
+    width: 2px;
+}
+#employment.home-section.timeline:before {
+    top: 62px;
+    height: calc(100% - 40px);
+}
 .event-pair { margin: 0; padding: 0 0 32px; position: relative; }
 .timeline .event { border: 0; margin: 0; padding: 0; text-align: left; width: 100%; }
 .timeline .event-pair .event { border: 0; margin: 0; padding: 0; }
