@@ -67,12 +67,14 @@
   padding: 0.8em;
   color: #b8b7ad;
   font-size: 1.1em;
+  transition: color 0.18s ease, text-shadow 0.18s ease;
 
   &:active,
   &:visited,
   &:focus,
   &:hover {
-    color: #b8b7ad;
+    color: #f5efe7;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
   }
 }
 
